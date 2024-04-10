@@ -1,0 +1,16 @@
+:root {
+  /* coleurs*/
+  --main-color: #606c38;
+  --secondary-color: #4a1b20;
+  --third-color: #bc6c25;
+  --light-color: #fefae0;
+
+  /* polices*/
+
+  --main-font-family: Arial, Helvetica, sans-serif;
+  --title-font-family:cursive;
+  --main-font-size: 0.8rem;
+  --title-font-size: 1.2rem;
+}
+
+ 
