@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import "./App.css";
 import axios from "axios";
+import Footer from './components/footer';
 /* const sampleBook = {} */
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <>
     <p>{bookTitle}</p>
     <button type="button" onClick={getBook} >Click me</button>
+    <Footer />
     </>
   );
 }
