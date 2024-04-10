@@ -1,23 +1,29 @@
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import "./App.css";
 import axios from "axios";
-/* const sampleBook = {} */
 
 function App() {
-  const [bookTitle, setBookTitle] = useState("Title here")
+  const [bookTitle, setBookTitle] = useState(null)
 
-  function getBook(){
-    axios
-      .get("https://openlibrary.org/search.json?q=the+lord+of+the+rings")
-      .then((response) => {setBookTitle(response.data.docs[9].title);})
-      .catch((err) => console.error(err));
+  useEffect(() => {
+    async function startFetching() {
+      try{
+      const response = await axios.get("https://openlibrary.org/search.json?q=the+lord+of+the+rings");
+      setBookTitle(response.data.docs[9].title);
+      }
+      catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
 
-  }
+    startFetching();
+  });
+
 
   return (
     <>
-    <p>{bookTitle}</p>
-    <button type="button" onClick={getBook} >Click me</button>
+    <h1>Cover4You</h1>
+    <p>{bookTitle ?? 'Loading...'}</p>
     </>
   );
 }
