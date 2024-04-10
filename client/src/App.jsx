@@ -10,9 +10,9 @@ function App() {
 
   useEffect(() => {
     async function startFetching() {
-      try{
-      const response = await axios.get("https://openlibrary.org/search.json?q=the+lord+of+the+rings");
-      setBookTitle(response.data.docs[9].title);
+      try {
+        const response = await axios.get("https://openlibrary.org/search.json?q=the+lord+of+the+rings");
+        setBookTitle(response.data.docs[9].title);
       }
       catch (error) {
         console.error('Error fetching data:', error);
@@ -31,8 +31,7 @@ function App() {
 
       <section >
         <div>
-    <p>{bookTitle ?? 'Loading...'}</p>
-          <Books />
+          <Books bookTitle={bookTitle} />
         </div>
       </section>
 
