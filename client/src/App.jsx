@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import "./App.css";
 import axios from "axios";
+import "./CharteGraphique.css";
 /* const sampleBook = {} */
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <>
-    <p>{bookTitle}</p>
+    <p className="test">{bookTitle}</p>
     <button type="button" onClick={getBook} >Click me</button>
     </>
   );
