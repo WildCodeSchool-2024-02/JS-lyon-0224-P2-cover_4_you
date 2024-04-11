@@ -21,13 +21,14 @@ function Books() {
               setIsbnCode(response.data.docs[0].isbn[0])
             });
 
-
+          // ici
           await axios.get("https://covers.openlibrary.org/b/ISBN/9780739408254-M.jpg")
-          .then((response) => {
-            console.log(response);
-            setImage(response)
-          });
-
+            .then((response) => {
+              console.log(response);
+              setImage(response)
+            });
+          // ici
+          
 
         }
         catch (error) {
