@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from "./ListBooks.module.css"
 
-export default function BookCard({book}){
+export default function BookCard({ book }) {
 
     function canDisplay(element) {
         return book !== null ? book[element] : 'Loading...';
@@ -9,16 +9,19 @@ export default function BookCard({book}){
 
     const isbnKey = book.isbn[0];
 
-    return(
+    return (
         <div className={styles.globalBook}>
-        <p className={styles.titleBook}>{canDisplay('title')} </p>
-        <p className={styles.author}>{canDisplay('author_name')} </p>
-  
-        <img src={`https://covers.openlibrary.org/b/ISBN/${isbnKey}-M.jpg`} alt='' />
-  
-        <p>{canDisplay('first_publish_year')}</p>
-        <button type="button">✏️</button>
-      </div>
+            <h2 className={styles.titleBook}>{canDisplay('title')} </h2>
+            <p className={styles.author}>Author : {canDisplay('author_name')} </p>
+            <p>Year : {canDisplay('first_publish_year')}</p>
+
+            <img src={`https://covers.openlibrary.org/b/ISBN/${isbnKey}-M.jpg`} alt='' />
+
+            <div className={styles.button}>
+                <button type="button">Customise</button>
+                <button type="button">🤍</button>
+            </div>
+        </div>
     );
 }
 

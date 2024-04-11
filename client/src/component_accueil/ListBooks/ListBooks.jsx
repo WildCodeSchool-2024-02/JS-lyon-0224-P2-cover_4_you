@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import BookCard from './BookCard'
+import BookCard from './BookCard';
 
 function Books() {
 

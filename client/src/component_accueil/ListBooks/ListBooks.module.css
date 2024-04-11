@@ -1,5 +1,6 @@
 .globalBook {
     background-color: #FEFAE0;
+    box-shadow: 0px 10px 10px gray;
     border: 2px solid #BC6C25;
     border-radius: 25px;
     display: flex;
@@ -9,14 +10,25 @@
     margin: 20px;
 }
 
+
 .titleBook {
-font-size: 20px;
+    font-size: 20px;
 }
 
-.author{
-color: red;
+h2 {
+    text-align: center;
 }
 
-img,button {
+p {
+    font-size: 1rem;
+}
+
+img,
+button {
     margin: 10px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
 }

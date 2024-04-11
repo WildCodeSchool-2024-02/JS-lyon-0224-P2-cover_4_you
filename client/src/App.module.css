@@ -90,9 +90,7 @@ button {
     text-decoration: none;
 
     /* border */
-    border-bottom: 0.4rem solid var(--white-color);
     border-radius: 1rem;
-    
 }
 
 ul li {
