@@ -48,13 +48,16 @@ function Books() {
   return (
 
     <div className={styles.globalBook}>
-      <p className={styles.titleBook}>{canDisplay('title')} </p>
-      <p className={styles.author}>{canDisplay('author_name')} </p>
+      <h2 className={styles.titleBook}>{canDisplay('title')} </h2>
 
       <img src='https://covers.openlibrary.org/b/ISBN/9780739408254-M.jpg' alt='' />
+      <p className={styles.author}>Author : {canDisplay('author_name')} </p>
+      <p>Year :{canDisplay('first_publish_year')}</p>
 
-      <p>{canDisplay('first_publish_year')}</p>
-      <button type="button">Customise</button>
+      <div className={styles.button}>
+        <button type="button">Customise</button>
+        <button type="button">🤍</button>
+      </div>
     </div>
   );
 }

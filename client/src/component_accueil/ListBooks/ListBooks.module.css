@@ -10,22 +10,25 @@
     margin: 20px;
 }
 
-button {
-    text-align: center;
-    border-radius: 5px;
-    background-color: #BC6C25;
-    width: 50%;
-}
 
 .titleBook {
     font-size: 20px;
 }
 
-.author {
-    color: red;
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
 }
 
 img,
 button {
     margin: 10px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
 }
