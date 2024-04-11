@@ -1,21 +1,29 @@
-import { useState, useEffect } from 'react';
-import "./App.css";
+// CSS GLOBAL //
+import "./App.module.css";
+
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+// ========== COMPONENTS ======================================= //
+
+import Nav from "./component_accueil/Nav/Nav";
 import Books from "./component_accueil/ListBooks";
 import "./component_accueil/ListBooks.css";
-import axios from "axios";
-import "./CharteGraphique.css";
+
+// ============================================================= //
 
 function App() {
-  const [bookTitle, setBookTitle] = useState(null)
+  const [bookTitle, setBookTitle] = useState(null);
 
   useEffect(() => {
     async function startFetching() {
-      try{
-      const response = await axios.get("https://openlibrary.org/search.json?q=the+lord+of+the+rings");
-      setBookTitle(response.data.docs[9].title);
-      }
-      catch (error) {
-        console.error('Error fetching data:', error);
+      try {
+        const response = await axios.get(
+          "https://openlibrary.org/search.json?q=the+lord+of+the+rings"
+        );
+        setBookTitle(response.data.docs[9].title);
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
     }
 
@@ -23,15 +31,15 @@ function App() {
   });
 
   return (
-    <main >
+    <main>
       <header>
         <h1>Cover4You</h1>
-        <nav>NavBar</nav>
+        <Nav />
       </header>
 
-      <section >
+      <section>
         <div>
-    <p>{bookTitle ?? 'Loading...'}</p>
+          <p>{bookTitle ?? "Loading..."}</p>
           <Books />
         </div>
       </section>
