@@ -15,9 +15,11 @@ function Nav() {
           <a href={styles.navbarRoute}>My basket</a>
         </li>
         <li className={styles.navbarLinksItems}>
-          <a href={styles.navbarRoute}>Conactez-nous</a>
+          <a href={styles.navbarRoute}>Contact</a>
         </li>
       </ul>
+    {/* <button className={styles.menuBurger}></button>
+    <button className={styles.menuCross}></button> */}
     </nav>
   );
 }
