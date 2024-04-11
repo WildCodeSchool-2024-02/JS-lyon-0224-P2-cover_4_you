@@ -28,7 +28,7 @@ function Books() {
               setImage(response)
             });
           // ici
-          
+
 
         }
         catch (error) {
@@ -54,7 +54,7 @@ function Books() {
       <img src='https://covers.openlibrary.org/b/ISBN/9780739408254-M.jpg' alt='' />
 
       <p>{canDisplay('first_publish_year')}</p>
-      <button type="button">✏️</button>
+      <button type="button">Customise</button>
     </div>
   );
 }

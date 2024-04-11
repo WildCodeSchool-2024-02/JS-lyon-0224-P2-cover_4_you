@@ -3,7 +3,7 @@ import Books from "./component_accueil/ListBooks/ListBooks";
 
 
 function App() {
-  
+
   return (
     <main >
       <header>
@@ -13,7 +13,7 @@ function App() {
 
       <section >
         <div>
-          <Books/>
+          <Books />
         </div>
       </section>
 
