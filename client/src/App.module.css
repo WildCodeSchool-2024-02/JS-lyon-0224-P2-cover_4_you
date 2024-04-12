@@ -10,8 +10,8 @@
   --light-color: #fefae0;
 
   /*COULEURS : clair et fonce*/
-  --dark-color : #0000;
-  --white-color :#FFFF;
+  --dark-color: #0000;
+  --white-color: #ffff;
 
   /*POLICES*/
 
@@ -23,37 +23,33 @@
   --title-font-size: 1.2rem;
 
   /* Générique */
-  --main-font-size: 0.8rem; 
-  --main-font-family-sansSerif:  "Poppins", sans-serif;
+  --main-font-size: 0.8rem;
+  --main-font-family-sansSerif: "Poppins", sans-serif;
   --main-font-family-bold: "Poppins", sans-serif, bold;
   --main-font-family-italic: "Poppins", sans-serif, italic;
-  
-    /* Espace */
-    --spacing-little: 0.12rem;
-    --spacing-medium: 0.3rem;
-    --spacing-big: 0.75rem;
-    
+
+  /* Espace */
+  --spacing-little: 0.12rem;
+  --spacing-medium: 0.3rem;
+  --spacing-big: 0.75rem;
 }
-
-
 
 /*========== CSS BALISE HTML==========*/
 
 * {
-    padding: 0rem;
-    margin: 0rem;
-    box-sizing: border-box;
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0rem;
-    
+  margin: 0rem;
 }
 
 h1 {
   font-family: var(--title-font-family);
   font-size: calc(1.5 * --title-font-size);
-  color:var(--main-color);
+  color: var(--main-color);
   margin: 0.5rem;
 }
 
@@ -65,41 +61,39 @@ h2 {
 }
 
 h3 {
-    font-family: var(--title-font-family);
-    font-size: var(--title-font-size);
-    color: var(--third-color);
-    margin: 0.5rem;
-  }
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--third-color);
+  margin: 0.5rem;
+}
 
 p {
-    font-family: var(--main-font-family);
-    font-size: var(--title-font-size);
-    color: var(--third-color);
-    margin: 0.5rem;
+  font-family: var(--main-font-family);
+  font-size: var(--title-font-size);
+  color: var(--third-color);
+  margin: 0.5rem;
 }
 
 button {
+  padding: 0.5rem;
+  background-color: var(--main-color);
 
-    Padding: 0.5rem;
-    background-color:var(--main-color);
+  /* texte */
+  font-family: var(--title-font-family);
+  color: var(--light-color);
+  text-shadow: -0.13rem color var(--dark-color);
+  text-decoration: none;
 
-    /* texte */
-    font-family: var(--title-font-family);
-    color: var(--light-color);
-    text-shadow: -0.13rem color var(--dark-color);
-    text-decoration: none;
-
-    /* border */
-    border-radius: 1rem;
+  /* border */
+  border-radius: 1rem;
 }
 
 ul li {
-    text-decoration: none;
-   
+  text-decoration: none;
 }
 
 logo {
-max-width: 0.8rem ;
-max-height: 0.5rem;
-border-radius: 0.5rem;
+  max-width: 0.8rem;
+  max-height: 0.5rem;
+  border-radius: 0.5rem;
 }
