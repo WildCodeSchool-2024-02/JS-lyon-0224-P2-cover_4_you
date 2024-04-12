@@ -1,0 +1,35 @@
+/* Footer.module.css */
+
+Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ac1515;
+  color: black;
+  padding: 20px;
+}
+
+.image-logo {
+  display: flex;
+  align-items: center;
+}
+
+.image-logo img {
+  margin-right: 20px;
+}
+
+.address ul {
+  list-style: none;
+  padding: 10px;
+  margin: 20px;
+}
+
+.address ul li {
+  margin-bottom: 10px;
+}
+
+Footer p {
+  text-align: start;
+  font-family: "Trebuchet MS";
+  padding-inline-end: 10px;
+}
