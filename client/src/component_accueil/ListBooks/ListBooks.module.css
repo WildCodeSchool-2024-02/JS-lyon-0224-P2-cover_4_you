@@ -1,5 +1,5 @@
 .globalBook {
-    background-color: #FEFAE0;
+    background-color: var(--light-color);
     border: 2px solid #BC6C25;
     border-radius: 25px;
     display: flex;

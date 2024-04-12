@@ -1,7 +1,166 @@
+.navBar {
+  background-color: var(--main-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  /* position: ; */
+  min-height: 6vh;
+  min-width: 100vw;
+  width: 25vw;
+  padding: 0.5rem;
+}
+.logo{
+    width: 40vw;
+    height:auto;
+    border-radius: 0.5rem;
+    margin:0rem;
+    padding: 0.1rem;
+}
+
+.navBarLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: (var(--main-color));
+  padding: 2rem;
+  /* width: 0;
+  /* visibility: hidden;
+  transition: all .8sec ease-out; */ 
+}
+
+.showNav .navBarLinks {
+  width: 100vw;
+  right: 0;
+  visibility: visible;
+}
+
+.navbarLinksItems::after {
+  content: "";
+  display: block;
+  margin : 0 auto;
+  width :3vw; 
+  height : 0.5vh;
+  background-color: white;
+
+}
+
+.navbarLinksItems:last-child:after {
+    display: none;
+    
+  }
+
+  a {
+    color:white;
+    font-size: 0.8rem;
+
+  }
+
+.navbarRoute {
+    display: block;
+    padding: 1.6rem;
+    font-size: 5vw;
+    color: azure;
+}
+
+  
+.showNav .navBar {
+    width: 100vw;
+    right: 0;
+    visibility: visible;
+  }
+
+.navbarBurger {
+  display: block;
+  position: fixed;
+  top: 1 rem;
+  right: 1rem;
+}
+
+.navbarBurger:hover {
+  cursor: pointer;
+}
+
+/* Menu burger */
+.burgerBar,
+.burgerBar::before,
+.burgerBar::after {
+  display: block;
+  width: 40px;
+  height: 2px;
+  position: relative;
+  border-radius: 1rem;
+  background-color: white;
+  transition: all .5sec ease-in-out;
+}
+.burgerBar::before,
+.burgerBar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.burgerBar::before {
+    transform: translate(-8rem);
+}
+
+.burgerBar::after {
+    transform: translate(0.8rem);
+}
+
+.showNav.burgerBar {
+    background: transparent;
+    width: 0;
+    
+}
+
+.showNav.burgerBar::before {
+    transform: (45deg);;
+}
+
+.showNav.burgerBar::after {
+    transform: (-45deg);
+}
+
+/* border button animation */
+
+.navbarLinksItems{
+    transform: translate(100vh);
+}
+
+.showNav .navbarLinksItems{
+    transform: translate(0);
+}
+
+.showNav .slideInDown1{
+    transition: all 1.3sec ease-out;
+}
+
+.showNav .slideInDown2{
+    transition: all 1.1sec ease-out;
+}
+.showNav .slideInDown3{
+    transition: all 1.2sec ease-out;
+}
+
+.showNav .slideInDown4{
+    transition: all 1.3sec ease-out;
+}
 
 
-
-.navbar{
-    background-color:#606c38;
-
+@media screen and (min-width = 767px) {
+  .navbarBurger {
+    display: none;
+    width: 40vw;
+    height: 40vh;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+  }
 }

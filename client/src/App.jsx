@@ -4,17 +4,15 @@ import Nav from "./component_accueil/Nav/Nav";
 import Books from "./component_accueil/ListBooks/ListBooks";
 
 function App() {
-  
   return (
     <main>
       <header>
-        <h1>Cover4You</h1>
         <Nav/>
       </header>
 
-      <section >
+      <section>
         <div>
-          <Books/>
+          <Books />
         </div>
       </section>
 
