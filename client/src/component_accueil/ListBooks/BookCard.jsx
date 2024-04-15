@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styles from "./ListBooks.module.css";
 
 export default function BookCard({ book }) {
+
   function canDisplay(element) {
     return book !== null ? book[element] : "Loading...";
   }
@@ -11,9 +12,9 @@ export default function BookCard({ book }) {
   return (
     <div className={styles.globalBook}>
       <h2 className={styles.titleBook}>{canDisplay("title")} </h2>
-      <p className={styles.author}>Author : {canDisplay("author_name")} </p>
+      {/* <p className={styles.author}>Author : {canDisplay("author_name")} </p>
       <p>Year : {canDisplay("first_publish_year")}</p>
-
+ */}
       <img
         src={`https://covers.openlibrary.org/b/ISBN/${isbnKey}-M.jpg`}
         alt=""
@@ -29,6 +30,7 @@ export default function BookCard({ book }) {
 
 BookCard.propTypes = {
   book: PropTypes.shape({
-    isbn: PropTypes.arrayOf(PropTypes.string),
-  }).isRequired,
+      isbn: PropTypes.arrayOf(PropTypes.string).isRequired
+
+}).isRequired
 };
