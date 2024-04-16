@@ -1,0 +1,9 @@
+.icon {
+  cursor: pointer;
+  user-select: none;
+}
+
+.isFavorite {
+  color: orange;
+}
+

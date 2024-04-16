@@ -1,7 +1,8 @@
 // CSS GLOBAL //
 import "./App.module.css";
-import Nav from "./component_accueil/Nav/Nav";
-import Books from "./component_accueil/ListBooks/ListBooks";
+import Nav from "./component_home/Nav/Nav";
+import Books from "./component_home/ListBooks/ListBooks";
+
 
 function App() {
   return (
