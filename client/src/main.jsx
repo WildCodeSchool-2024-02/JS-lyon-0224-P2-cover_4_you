@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Home from "./pages/Home";
+import BookPage from "./pages/BookPage";
 
 import GetBook from "./GetBook";
 
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
         id: "home",
         element: <Home />,
         loader: () => GetBook(),
+      },
+      {
+        path: "/book-page",
+        id: "book-page",
+        element: <BookPage />,
       },
     ],
   },
