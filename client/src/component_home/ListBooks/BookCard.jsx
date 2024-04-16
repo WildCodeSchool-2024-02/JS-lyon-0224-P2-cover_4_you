@@ -18,9 +18,7 @@ export default function BookCard({ book }) {
       />
       <div className={styles.button}>
         <button type="button">Customise</button>
-        <button>
-          <ButtonFavorite />
-        </button>
+        <ButtonFavorite />
       </div>
     </div>
   );

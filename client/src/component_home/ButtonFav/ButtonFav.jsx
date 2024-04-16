@@ -5,17 +5,14 @@ function ButtonFavorite() {
   const [favorite, setFavorite] = useState(false);
 
   return (
-    <div>
-      <span
-        className={`${styles.icon} ${favorite ? styles.isFavorite : ""}`}
-        onClick={() => {
-          const newFavoriteValue = !favorite;
-          setFavorite(newFavoriteValue);
-        }}
-      >
-        &#x2605;
-      </span>
-    </div>
+<button type="button"
+  className={`${styles.icon} ${favorite ? styles.isFavorite : ""}`}
+  onClick={() => {
+    setFavorite(!favorite);
+  }}
+>
+  &#x2605;
+</button>
   );
 }
 
