@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "./ListBooks.module.css";
+import ButtonFavorite from "../ButtonFav/ButtonFav";
 
 export default function BookCard({ book }) {
   function canDisplay(element) {
@@ -17,7 +18,7 @@ export default function BookCard({ book }) {
       />
       <div className={styles.button}>
         <button type="button">Customise</button>
-        <button type="button">🤍</button>
+        <ButtonFavorite />
       </div>
     </div>
   );
