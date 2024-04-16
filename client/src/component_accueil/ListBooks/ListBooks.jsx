@@ -1,37 +1,8 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import PropTypes from "prop-types";
 import BookCard from "./BookCard";
 import styles from "./ListBooks.module.css";
 
-function Books() {
-  const [bookList, setBookList] = useState([]);
-
-  useEffect(() => {
-    const homeBooks = [
-      "the+lord+of+the+rings",
-      "harry+potter",
-      "dragon+ball+z",
-      "l%27%C3%A9tranger",
-    ];
-
-    const fetchBooks = async () => {
-      try {
-        const responses = await Promise.all(
-          homeBooks.map((book) =>
-            axios.get(`https://openlibrary.org/search.json?q=${book}`)
-          )
-        );
-
-        const newBookList = responses.map((response) => response.data.docs[0]);
-        setBookList(newBookList);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchBooks();
-  }, []);
-
+function Books({ bookList }) {
   return (
     <div className={styles.homeBooks}>
       {Array.isArray(bookList) &&
@@ -44,5 +15,11 @@ function Books() {
     </div>
   );
 }
+
+Books.propTypes = {
+  bookList: PropTypes.arrayOf({
+    isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+};
 
 export default Books;
