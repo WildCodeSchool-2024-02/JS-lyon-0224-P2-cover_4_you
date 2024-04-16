@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/book-page",
-        element: <BookPage/>,
+        element: <BookPage />,
       },
     ],
   },

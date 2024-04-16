@@ -7,10 +7,10 @@ function App() {
   return (
     <>
       <Nav />
-    <main>
-      <Outlet />
-    </main>
-    {/* <Footer /> */}
+      <main>
+        <Outlet />
+      </main>
+      {/* <Footer /> */}
     </>
   );
 }
