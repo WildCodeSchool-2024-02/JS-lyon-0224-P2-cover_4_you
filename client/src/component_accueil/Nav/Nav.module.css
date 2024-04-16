@@ -4,22 +4,23 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
   /* position: ; */
-  min-height: 6vh;
+  /* min-height: 6vh;
   min-width: 100vw;
-  width: 25vw;
+  width: 25vw; */
   padding: 0.5rem;
 }
-.logo{
-    width: 40vw;
-    height:auto;
-    border-radius: 0.5rem;
-    margin:0rem;
-    padding: 0.1rem;
+.logo {
+  width: 20vw;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 0rem;
+  padding: 0.1rem;
 }
-
-.navBarLinks {
-  display: flex;
+.navbarLinks_Container {
+  background-color: white;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -30,12 +31,10 @@
   height: 100vh;
   background-color: (var(--main-color));
   padding: 2rem;
-  /* width: 0;
-  /* visibility: hidden;
-  transition: all .8sec ease-out; */ 
+  transition: all 0.8sec ease-out;
 }
 
-.showNav .navBarLinks {
+.menu_nav_Open .navbarLinks_Container {
   width: 100vw;
   right: 0;
   visibility: visible;
@@ -44,37 +43,29 @@
 .navbarLinksItems::after {
   content: "";
   display: block;
-  margin : 0 auto;
-  width :3vw; 
-  height : 0.5vh;
+  margin: 0 auto;
+  width: 3vw;
+  height: 0.5vh;
   background-color: white;
-
 }
 
-.navbarLinksItems:last-child:after {
-    display: none;
-    
-  }
-
-  a {
-    color:white;
-    font-size: 0.8rem;
-
-  }
+a {
+  color: black;
+  font-size: 0.9rem;
+}
 
 .navbarRoute {
-    display: block;
-    padding: 1.6rem;
-    font-size: 5vw;
-    color: azure;
+  display: block;
+  padding: 1.6rem;
+  font-size: 5vw;
+  color: white;
 }
 
-  
-.showNav .navBar {
-    width: 100vw;
-    right: 0;
-    visibility: visible;
-  }
+.menu_nav_Open .navBar {
+  width: 100vw;
+  right: 0;
+  visibility: visible;
+}
 
 .navbarBurger {
   display: block;
@@ -97,7 +88,7 @@
   position: relative;
   border-radius: 1rem;
   background-color: white;
-  transition: all .5sec ease-in-out;
+  transition: all 0.5sec ease-in-out;
 }
 .burgerBar::before,
 .burgerBar::after {
@@ -107,52 +98,50 @@
 }
 
 .burgerBar::before {
-    transform: translate(-8rem);
+  transform: translate(-8rem);
 }
 
 .burgerBar::after {
-    transform: translate(0.8rem);
+  transform: translate(0.8rem);
 }
 
 .showNav.burgerBar {
-    background: transparent;
-    width: 0;
-    
+  background: transparent;
+  width: 0;
 }
 
-.showNav.burgerBar::before {
-    transform: (45deg);;
+.menu_nav_Open .burgerBar::before {
+  transform: (45deg);
 }
 
-.showNav.burgerBar::after {
-    transform: (-45deg);
+.menu_nav_Open .burgerBar::after {
+  transform: (-45deg);
 }
 
 /* border button animation */
 
-.navbarLinksItems{
-    transform: translate(100vh);
+.navbarLinksItems {
+  transform: translate(100vh);
 }
 
-.showNav .navbarLinksItems{
-    transform: translate(0);
+.menu_nav_Open .navbarLinksItems {
+  transform: translate(0);
 }
 
-.showNav .slideInDown1{
-    transition: all 1.3sec ease-out;
+.menu_nav_Open .slideInDown1 {
+  transition: all 1.3sec ease-out;
 }
 
-.showNav .slideInDown2{
-    transition: all 1.1sec ease-out;
+.menu_nav_Open .slideInDown2 {
+  transition: all 1.1sec ease-out;
 }
-.showNav .slideInDown3{
-    transition: all 1.2sec ease-out;
-}
-
-.showNav .slideInDown4{
-    transition: all 1.3sec ease-out;
+.menu_nav_Open .slideInDown3 {
+  transition: all 1.2sec ease-out;
 }
 
+.menu_nav_Open .slideInDown4 {
+  transition: all 1.3sec ease-out;
+}
 
 @media screen and (min-width = 767px) {
   .navbarBurger {
@@ -163,4 +152,16 @@
     border: none;
     color: inherit;
   }
+}
+
+.menu_nav_close {
+  background-image: url(../../assets/images/close.svg);
+  height: 5vh;
+  width: 4vw;
+}
+
+.menu_nav_open {
+  background-image: url(../../assets/images/burger.svg);
+  height: 5vh;
+  width: 4vw;
 }

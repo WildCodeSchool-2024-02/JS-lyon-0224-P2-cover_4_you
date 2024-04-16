@@ -7,7 +7,7 @@ function App() {
   return (
     <main>
       <header>
-        <Nav/>
+        <Nav/> 
       </header>
 
       <section>
