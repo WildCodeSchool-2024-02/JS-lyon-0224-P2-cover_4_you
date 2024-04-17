@@ -1,5 +1,3 @@
-/* ----Footer.module.css----- */
-
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
@@ -65,4 +63,8 @@ figure img {
     /* display: flex; */
     flex-direction: column;
   }
+}
+/*-----Enlever le blanc sous le footer------*/
+body {
+  line-height: 2rem;
 }
