@@ -80,7 +80,6 @@ h1, p {
   margin-bottom: 1rem;
 }
 button {
-  padding: 0.5rem;
   background-color: var(--main-color);
 
   /* texte */

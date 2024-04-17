@@ -3,69 +3,66 @@
 // import { useRef } from "react";
 import { useState } from "react";
 import styles from "./Nav.module.css";
-import Burger from "../../assets/images/burger.svg";
-import Croix from "../../assets/images/close.svg";
 
 function Nav() {
-  const [burgerNavOpen, setBurgerNavOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleBurgerNavOpen = () => {
-    setBurgerNavOpen(!burgerNavOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
-  // const burgerref = useRef(null);
-  // useClickAway(burgerref, () => setBurgerNavOpen(false));
 
-  const handleBurgerNavClose = () => {
-    setBurgerNavOpen(false);
-  };
+  // const handleBurgerNavClose = () => {
+  //   setIsMenuOpen(false);
+  // };
 
   return (
-    <div>
-      <nav
-        className={`styles.navbar ${burgerNavOpen ? styles.menu_nav_open : styles.menu_nav_close}`}
-      >
-        <div className={styles.navBar}>
-          <img
-            className={styles.logo}
-            src="src/assets/images/logo_accueil.png"
-            alt="logo Cover4You"
-          />
-          <ul className={styles.navbarLinks_Container}>
-            <li className={styles.navbarLinksItems.slideInDown1}>
-              <a href={styles.navbarRoute}>Our Team</a>
-            </li>
-            <li className={styles.navbarLinksItems.slideInDown2}>
-              <a href={styles.navbarRoute}>Our Librairie</a>
-            </li>
-            <li className={styles.navbarLinksItems.slideInDown3}>
-              <a href={styles.navbarRoute}>My basket</a>
-            </li>
-            <li className={styles.navbarLinksItems.slideInDown4}>
-              <a href={styles.navbarRoute}>Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <button
-            type="button"
-            className={styles.menu_nav_open}
-            onClick={handleBurgerNavOpen}
-            aria-label="open menu burger"
-          />
+    <div className={styles.nav_container}>
+      <nav className={styles.navbar}>
+  
+      <img
+              className={styles.logo_Cover4You}
+              src="src/assets/images/logo_accueil.png"
+              alt="logo Cover4You"
+            />
 
-          <button
-            type="button"
-            className={styles.menu_nav_close}
-            onClick={handleBurgerNavClose}
-            aria-label="close menu burger"
-          />
-        </div>
+      {/* <div className={styles.nav_burger_container}> */}
+      <button
+              type="button"
+              id="button_navbar"
+              onClick={toggleMenu}
+              className={
+                isMenuOpen === true
+                  ? styles.burger_nav_open
+                  : styles.cross_nav_close
+              }
+              aria-label="Open menu burger"
+            />
+        {/* </div> */}
+
+          {isMenuOpen === true && (
+          <section className={styles.handle_menu}>
+            <ul className={styles.navbar_links_container}>
+              <li className={styles.navbar_links_items}>
+                <a href={styles.navbar_route}>Our Librairie</a>
+              </li>
+              <li className={styles.navbar_links_items}>
+                <a href={styles.navbar_route}>Our Teams</a>
+              </li>
+              <li className={styles.navbar_links_items}>
+                <a href={styles.navbar_route}>My basket</a>
+              </li>
+              <li className={styles.navbar_links_items}>
+                <a href={styles.navbar_route}>Contact</a>
+              </li>
+            </ul>
+          </section>
+        )}
+   
       </nav>
     </div>
   );
 }
 
-//
 export default Nav;
 
 // Nav.propTypes =
