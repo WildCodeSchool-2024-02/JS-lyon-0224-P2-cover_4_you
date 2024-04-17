@@ -11,21 +11,15 @@ function Nav() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // const handleBurgerNavClose = () => {
-  //   setIsMenuOpen(false);
-  // };
-
   return (
-    <div className={styles.nav_container}>
-      <nav className={styles.navbar}>
-  
+    <nav className={styles.navbar}>
+      <div className={styles.nav_container}>
       <img
               className={styles.logo_Cover4You}
               src="src/assets/images/logo_accueil.png"
               alt="logo Cover4You"
             />
 
-      {/* <div className={styles.nav_burger_container}> */}
       <button
               type="button"
               id="button_navbar"
@@ -37,7 +31,7 @@ function Nav() {
               }
               aria-label="Open menu burger"
             />
-        {/* </div> */}
+          </div>
 
           {isMenuOpen === true && (
           <section className={styles.handle_menu}>
@@ -57,13 +51,8 @@ function Nav() {
             </ul>
           </section>
         )}
-   
-      </nav>
-    </div>
+    </nav>  
   );
 }
 
 export default Nav;
-
-// Nav.propTypes =
-//   logoCover4You: PropTypes.string.isRequired,

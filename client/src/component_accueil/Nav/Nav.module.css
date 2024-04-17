@@ -8,6 +8,11 @@
   padding: 0;
 }
 
+.nav_container{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* .burger_menu_container {
  
 
@@ -18,13 +23,14 @@
   margin: 0rem;
   padding: 0.1rem;
   border-radius: 7px;
+  z-index: -1;
 }
 
 /* Menu ouvert + icone croix */
 .burger_nav_open {
   background-image: url(../../assets/images/close.svg);
   border: none;
-  height: 1vh;
+  height: 10vh;
   border: none;
   width: 4vw;
   z-index: 3;
@@ -35,7 +41,7 @@
 .cross_nav_close {
   background-image: url(../../assets/images/burger.svg);
   border: none;
-  height: 5vh;
+  height: 10vh;
   width: 4vw;
   z-index: 3;
   background-repeat: no-repeat;
