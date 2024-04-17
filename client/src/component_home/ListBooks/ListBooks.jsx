@@ -6,20 +6,17 @@ function Books({ bookList }) {
   return (
     <div className={styles.homeBooks}>
       {Array.isArray(bookList) &&
-        bookList.map((book) => {
-          if (book) {
-            return <BookCard key={book.title} book={book} />;
-          }
-          return null;
-        })}
+        bookList.map((book) => <BookCard key={book.title} book={book} />)}
     </div>
   );
 }
 
 Books.propTypes = {
-  bookList: PropTypes.arrayOf({
-    isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }).isRequired,
+  bookList: PropTypes.arrayOf(
+    PropTypes.shape({
+      isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }).isRequired
+  ).isRequired,
 };
 
 export default Books;
