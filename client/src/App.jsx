@@ -2,6 +2,7 @@
 import "./App.module.css";
 import Nav from "./component_accueil/Nav/Nav";
 import Books from "./component_accueil/ListBooks/ListBooks";
+import Footer from "./component_accueil/Footer/Footer";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       </section>
 
       <footer>
-        <p>Footer</p>
+        <Footer />
       </footer>
     </main>
   );

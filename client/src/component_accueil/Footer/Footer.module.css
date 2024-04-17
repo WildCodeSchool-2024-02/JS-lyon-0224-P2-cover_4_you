@@ -1,35 +1,68 @@
-/* Footer.module.css */
+/* ----Footer.module.css----- */
 
-Footer {
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  gap: 0.3rem; /* Espace entre les éléments */
+  list-style-type: none;
+  font-style: normal;
+  font-family: sans-serif;
+  margin: auto;
+  color: var(--light-color);
+}
+
+footer > section {
+  background-color: #606c38;
+  padding: 24px;
+  padding-top: px;
+  padding-right: 2px;
+}
+
+p {
+  color: var(--light-color);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ac1515;
-  color: black;
-  padding: 20px;
+  justify-content: center;
+  font-family: sans-serif;
 }
 
-.image-logo {
+footer p {
+  padding: auto;
+  margin: auto;
+}
+
+article {
   display: flex;
-  align-items: center;
-}
-
-.image-logo img {
-  margin-right: 20px;
-}
-
-.address ul {
-  list-style: none;
-  padding: 10px;
+  /*justify-content: center;*/
+  padding: 2px;
   margin: 20px;
 }
 
-.address ul li {
-  margin-bottom: 10px;
+figure {
+  display: flex;
+  /*justify-content: center;*/
+  border: 20px;
+  padding: 10px;
 }
 
-Footer p {
-  text-align: start;
-  font-family: "Trebuchet MS";
-  padding-inline-end: 10px;
+/*------Marge entre les images-------*/
+figure img {
+  margin: 30px;
+}
+
+#footer-container {
+  display: flex; /* Utilisez flexbox pour placer les éléments sur la même ligne */
+  justify-content: center; /* Alignez les éléments horizontalement au centre */
+}
+
+.alignLogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .alignLogo {
+    /* display: flex; */
+    flex-direction: column;
+  }
 }
