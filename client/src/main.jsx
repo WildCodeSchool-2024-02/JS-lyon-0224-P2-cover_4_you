@@ -9,7 +9,6 @@ import BookPage from "./pages/BookPage";
 
 import GetBook from "./GetBook";
 
-
 const router = createBrowserRouter([
   {
     element: <App />,
