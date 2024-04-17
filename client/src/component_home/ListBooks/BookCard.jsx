@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./ListBooks.module.css";
 import ButtonFavorite from "../ButtonFav/ButtonFav";
@@ -17,7 +18,10 @@ export default function BookCard({ book }) {
         alt=""
       />
       <div className={styles.button}>
-        <button type="button">Customise</button>
+        <Link to="/book-page">
+          <button type="button">Customise</button>
+        </Link>
+
         <ButtonFavorite />
       </div>
     </div>
