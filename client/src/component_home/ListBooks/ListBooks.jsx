@@ -17,9 +17,11 @@ function Books({ bookList }) {
 }
 
 Books.propTypes = {
-  bookList: PropTypes.arrayOf({
-    isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }).isRequired,
+  bookList: PropTypes.arrayOf(
+    PropTypes.shape({
+      isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }).isRequired
+  ).isRequired,
 };
 
 export default Books;
