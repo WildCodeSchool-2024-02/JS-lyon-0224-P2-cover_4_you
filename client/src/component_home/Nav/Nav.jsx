@@ -1,4 +1,5 @@
 import styles from "./Nav.module.css";
+import SearchBar from "./SearchBar";
 
 function Nav() {
   return (
@@ -18,6 +19,7 @@ function Nav() {
           <a href={styles.navbarRoute}>Contact</a>
         </li>
       </ul>
+      <SearchBar />
       {/* <button className={styles.menuBurger}></button>
     <button className={styles.menuCross}></button> */}
     </nav>
