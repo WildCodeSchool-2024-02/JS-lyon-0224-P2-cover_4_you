@@ -22,7 +22,7 @@ export default function BookBanner({ book }) {
       <div className={styles.buttonFav}>
         <ButtonFav />
       </div>
-      <Link className={styles.buttonCustom} to="/book-page">
+      <Link className={styles.buttonCustom} to={`/book-page/${isbnKey}`}>
         <button type="button">Customise</button>
       </Link>
     </div>
