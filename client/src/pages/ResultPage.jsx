@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import BookBanner from "../component_home/BookBanner/BookBanner";
@@ -22,6 +22,9 @@ export default function ResultPage() {
       {bookResult.map((book) => (
         <BookBanner key={book.title} book={book} />
       ))}
+      <Link to="/">
+        <button type="button">Return Home</button>
+      </Link>
     </>
   );
 }

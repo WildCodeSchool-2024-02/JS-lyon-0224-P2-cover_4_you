@@ -16,21 +16,17 @@ footer > section {
   padding-right: 2px;
 }
 
-p {
+footer p {
   color: var(--light-color);
+  padding: auto;
+  margin: auto;
   display: flex;
   justify-content: center;
   font-family: sans-serif;
 }
 
-footer p {
-  padding: auto;
-  margin: auto;
-}
-
 article {
   display: flex;
-  /*justify-content: center;*/
   padding: 2px;
   margin: 20px;
 }
@@ -60,7 +56,6 @@ figure img {
 
 @media screen and (max-width: 600px) {
   .alignLogo {
-    /* display: flex; */
     flex-direction: column;
   }
 }
