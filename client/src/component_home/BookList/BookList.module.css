@@ -28,7 +28,7 @@ p {
   font-size: 1rem;
 }
 
-img,
+.globalBook > img,
 button {
   margin: 10px;
   cursor: pointer;
