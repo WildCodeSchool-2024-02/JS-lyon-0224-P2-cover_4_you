@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./ListBooks.module.css";
+import styles from "./BookList.module.css";
 import ButtonFavorite from "../ButtonFav/ButtonFav";
 
 export default function BookCard({ book }) {

@@ -1,13 +1,7 @@
 import { useLoaderData } from "react-router-dom";
-import Books from "../component_home/ListBooks/ListBooks";
-// import Footer from "../component_accueil/Footer/Footer";
+import BookList from "../component_home/BookList/BookList";
 
 export default function Home() {
   const bookList = useLoaderData("home");
-  return (
-    <>
-      <Books bookList={bookList} />
-      {/* <Footer /> */}
-    </>
-  );
+  return <BookList bookList={bookList} />;
 }

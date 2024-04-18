@@ -16,16 +16,18 @@ footer > section {
   padding-right: 2px;
 }
 
-p {
+/* p {
+
+
+} */
+
+footer p {
   color: var(--light-color);
+  padding: auto;
+  margin: auto;
   display: flex;
   justify-content: center;
   font-family: sans-serif;
-}
-
-footer p {
-  padding: auto;
-  margin: auto;
 }
 
 article {
