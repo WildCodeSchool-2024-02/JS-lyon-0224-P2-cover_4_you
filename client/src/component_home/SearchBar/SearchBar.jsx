@@ -5,7 +5,7 @@ import styles from "./SearchBar.module.css";
 export default function SearchBar() {
   const [query, setQuery] = useState("");
   return (
-    <div>
+    <div className={styles.container}>
       <label htmlFor="searchInput">Enter your search:</label>
       <input
         type="text"
