@@ -30,14 +30,12 @@ footer p {
 
 article {
   display: flex;
-  /*justify-content: center;*/
   padding: 2px;
   margin: 20px;
 }
 
 figure {
   display: flex;
-  /*justify-content: center;*/
   border: 20px;
   padding: 10px;
 }
