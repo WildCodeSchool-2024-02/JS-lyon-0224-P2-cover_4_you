@@ -15,7 +15,7 @@ export default function BookCard({ book }) {
       <h2 className={styles.titleBook}>{canDisplay("title")} </h2>
       <img
         src={`https://covers.openlibrary.org/b/ISBN/${isbnKey}-M.jpg`}
-        alt=""
+        alt={book.title}
       />
       <div className={styles.button}>
         <Link to={`/book-page/${isbnKey}`}>
@@ -30,7 +30,7 @@ export default function BookCard({ book }) {
 
 BookCard.propTypes = {
   book: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
+    title: PropTypes.string,
+    isbn: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };

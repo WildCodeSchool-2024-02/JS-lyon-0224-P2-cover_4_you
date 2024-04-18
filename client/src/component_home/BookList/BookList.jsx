@@ -5,7 +5,7 @@ import styles from "./BookList.module.css";
 function BookList({ bookList }) {
   return (
     <div className={styles.homeBooks}>
-      {Array.isArray(bookList) &&
+      {Array.isArray(bookList) === true &&
         bookList.map((book) => <BookCard key={book.title} book={book} />)}
     </div>
   );
