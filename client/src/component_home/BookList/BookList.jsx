@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import BookCard from "./BookCard";
-import styles from "./ListBooks.module.css";
+import styles from "./BookList.module.css";
 
-function Books({ bookList }) {
+function BookList({ bookList }) {
   return (
     <div className={styles.homeBooks}>
       {Array.isArray(bookList) &&
@@ -11,7 +11,7 @@ function Books({ bookList }) {
   );
 }
 
-Books.propTypes = {
+BookList.propTypes = {
   bookList: PropTypes.arrayOf(
     PropTypes.shape({
       isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -19,4 +19,4 @@ Books.propTypes = {
   ).isRequired,
 };
 
-export default Books;
+export default BookList;

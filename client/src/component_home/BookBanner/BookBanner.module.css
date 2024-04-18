@@ -1,0 +1,6 @@
+.bookBanner {
+  display: flex;
+}
+img {
+  align-self: center;
+}
