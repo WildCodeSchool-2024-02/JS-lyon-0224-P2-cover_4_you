@@ -70,20 +70,6 @@ function Footer() {
               style={{ width: "30px", height: "30px" }}
             />
           </div>
-          {/* <div id="youtube">
-          <img
-            src="src/assets/images-footer/logo-youtube.png"
-            alt="youtube"
-            style={{ width: "30px", height: "30px" }}
-          />
-        </div> */}
-          {/* <div id="linkedin">
-          <img
-            src="src/assets/images-footer/logo-linkedin.png"
-            alt="linkedin"
-            style={{ width: "30px", height: "30px" }}
-          />
-        </div> */}
         </article>
         <div id="a">
           <p>Copyright© 2024|</p>
