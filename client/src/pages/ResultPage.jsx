@@ -11,7 +11,7 @@ export default function ResultPage() {
     try {
       axios
         .get(`https://openlibrary.org/search.json?q=${userQuery}`)
-        .then((result) => setBookResult(result.data.docs.slice(0, 10)));
+        .then((result) => setBookResult(result.data.docs.slice(0, 5)));
     } catch (error) {
       console.error("Error fetching data:", error);
     }
