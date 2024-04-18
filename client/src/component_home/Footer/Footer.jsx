@@ -6,7 +6,7 @@ function Footer() {
       <section>
         <ul>
           <li>
-            <b>Pratical information</b>
+            <b>Information</b>
           </li>
           <li>
             <b>About</b>
@@ -23,7 +23,7 @@ function Footer() {
           <li>Privacy policy</li>
           <li>Terms of Sales</li>
           <li>Learn more</li>
-          <li>Customize your book</li>
+          <li>Customise</li>
           <li>Soldes</li>
           <li>Follow us</li>
           <li>FAQ</li>
@@ -70,20 +70,6 @@ function Footer() {
               style={{ width: "30px", height: "30px" }}
             />
           </div>
-          {/* <div id="youtube">
-          <img
-            src="src/assets/images-footer/logo-youtube.png"
-            alt="youtube"
-            style={{ width: "30px", height: "30px" }}
-          />
-        </div> */}
-          {/* <div id="linkedin">
-          <img
-            src="src/assets/images-footer/logo-linkedin.png"
-            alt="linkedin"
-            style={{ width: "30px", height: "30px" }}
-          />
-        </div> */}
         </article>
         <div id="a">
           <p>Copyright© 2024|</p>
