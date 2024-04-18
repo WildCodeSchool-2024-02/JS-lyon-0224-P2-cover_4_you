@@ -6,12 +6,7 @@ function BookList({ bookList }) {
   return (
     <div className={styles.homeBooks}>
       {Array.isArray(bookList) &&
-        bookList.map((book) => {
-          if (book) {
-            return <BookCard key={book.title} book={book} />;
-          }
-          return null;
-        })}
+        bookList.map((book) => <BookCard key={book.title} book={book} />)}
     </div>
   );
 }

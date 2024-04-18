@@ -6,7 +6,7 @@ function Footer() {
       <section>
         <ul>
           <li>
-            <b>Pratical information</b>
+            <b>Information</b>
           </li>
           <li>
             <b>About</b>
@@ -23,7 +23,7 @@ function Footer() {
           <li>Privacy policy</li>
           <li>Terms of Sales</li>
           <li>Learn more</li>
-          <li>Customize your book</li>
+          <li>Customise</li>
           <li>Soldes</li>
           <li>Follow us</li>
           <li>FAQ</li>

@@ -22,8 +22,7 @@ const router = createBrowserRouter([
         loader: () => GetBook(),
       },
       {
-        path: "/book-page",
-        id: "book-page",
+        path: "/book-page/:isbn",
         element: <BookPage />,
       },
       {

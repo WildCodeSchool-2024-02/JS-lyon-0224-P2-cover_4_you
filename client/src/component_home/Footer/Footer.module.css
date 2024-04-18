@@ -1,7 +1,6 @@
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
-  gap: 0.3rem; /* Espace entre les éléments */
   list-style-type: none;
   font-style: normal;
   font-family: sans-serif;
@@ -12,7 +11,6 @@ ul {
 footer > section {
   background-color: #606c38;
   padding: 24px;
-  padding-top: px;
   padding-right: 2px;
 }
 
@@ -23,6 +21,15 @@ footer p {
   display: flex;
   justify-content: center;
   font-family: sans-serif;
+}
+
+ul li {
+  font-size: 0.65rem;
+  margin: auto;
+}
+
+b {
+  font-size: small;
 }
 
 article {
