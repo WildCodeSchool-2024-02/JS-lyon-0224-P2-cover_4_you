@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.searchBar {
+  width: 50vw;
+  padding-left: 2px;
+}

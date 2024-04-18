@@ -1,7 +1,6 @@
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
-  gap: 0.3rem; /* Espace entre les éléments */
   list-style-type: none;
   font-style: normal;
   font-family: sans-serif;
@@ -12,20 +11,25 @@ ul {
 footer > section {
   background-color: #606c38;
   padding: 24px;
-  padding-top: px;
   padding-right: 2px;
 }
 
-p {
+footer p {
   color: var(--light-color);
+  padding: auto;
+  margin: auto;
   display: flex;
   justify-content: center;
   font-family: sans-serif;
 }
 
-footer p {
-  padding: auto;
+ul li {
+  font-size: 0.65rem;
   margin: auto;
+}
+
+b {
+  font-size: small;
 }
 
 article {
@@ -58,7 +62,6 @@ figure img {
 
 @media screen and (max-width: 600px) {
   .alignLogo {
-    /* display: flex; */
     flex-direction: column;
   }
 }

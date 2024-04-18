@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./ListBooks.module.css";
+import styles from "./BookList.module.css";
 import ButtonFavorite from "../ButtonFav/ButtonFav";
 
 export default function BookCard({ book }) {
@@ -18,7 +18,7 @@ export default function BookCard({ book }) {
         alt=""
       />
       <div className={styles.button}>
-        <Link to="/book-page">
+        <Link to={`/book-page/${isbnKey}`}>
           <button type="button">Customise</button>
         </Link>
 
@@ -30,6 +30,7 @@ export default function BookCard({ book }) {
 
 BookCard.propTypes = {
   book: PropTypes.shape({
+    title: PropTypes.string.isRequired,
     isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };
