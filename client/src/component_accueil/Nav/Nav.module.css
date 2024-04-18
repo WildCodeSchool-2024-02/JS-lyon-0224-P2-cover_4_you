@@ -1,16 +1,14 @@
 .navbar {
   background-color: var(--main-color);
-  flex-wrap: wrap;
-  align-items: start;
-  justify-content: space-between;
-  height: 15vh;
+  height: 16vh;
   width: 100vw;
-  padding: 0;
+  padding: 0rem;
 }
 
-.nav_container{
+.nav_container {
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 /* .burger_menu_container {
@@ -18,56 +16,62 @@
 
 /* LOGO */
 .logo_Cover4You {
-  width: 25vw;
+  background-image: url(src/assets/images/Navbar/logo_accueil.png);
+  background-repeat: no-repeat;
+  background-size: 18vh;
+  width: 50vw;
   height: auto;
   margin: 0rem;
   padding: 0.1rem;
-  border-radius: 7px;
-  z-index: -1;
+  padding-left: 2rem;
+  z-index: 0;
 }
 
 /* Menu ouvert + icone croix */
 .burger_nav_open {
-  background-image: url(../../assets/images/close.svg);
+  background-image: url(../../assets/images/Navbar/close.svg);
   border: none;
+  background-size: 35px;
   height: 10vh;
-  border: none;
   width: 4vw;
   z-index: 3;
   background-repeat: no-repeat;
-  
+  padding-top: 2rem;
+  padding-left: 3rem;
 }
 /* Menu fermer + menu burger */
 .cross_nav_close {
-  background-image: url(../../assets/images/burger.svg);
+  background-image: url(../../assets/images/Navbar/burger2.png);
   border: none;
-  height: 10vh;
-  width: 4vw;
+  background-color: transparent;
+  background-size: 35px;
+  height: 20vh;
+  width: 14vw;
   z-index: 3;
   background-repeat: no-repeat;
 }
 
 .navbar_links_container {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:5rem;
+  gap: 5rem;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color:var(--main-color);
+  background-color: var(--main-color);
   position: relative;
-  z-index: 99;
+  padding-bottom: 15rem;
+  z-index: 3;
 }
+
 .navbar_links_items > a {
   font-size: 2rem;
-}
-
-.navbar_links_container > a {
-  position: absolute;
-}
-
-.navbar_links_items > a {
   color: white;
   padding: 2rem 4rem;
+}
+
+.navbar_route {
+  cursor: pointer;
+  background-color: aliceblue;
 }
