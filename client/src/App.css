@@ -3,8 +3,6 @@
 /*==========CHARTE GRAPHIQUE==========*/
 
 :root {
-
-
   /*COULEURS*/
   --main-color: #606c38;
   --secondary-color: #4a1b20;
@@ -19,7 +17,7 @@
 
   /* Titres */
   --title-font-family: "Cursive", sans-serif;
-  --title-font-family-bold: "Cursive",  sans-serif, bold;
+  --title-font-family-bold: "Cursive", sans-serif, bold;
   --title-font-family-italic: "Cursive", sans-serif, italic;
 
   --title-font-size: 1.2rem;
@@ -79,7 +77,8 @@ p {
   margin: 0.5rem;
 }
 
-h1, p {
+h1,
+p {
   margin-bottom: 1rem;
 }
 button {
@@ -96,25 +95,22 @@ button {
 }
 
 ul li {
+  text-decoration: none;
+  color: #fefae0;
+}
 
-    text-decoration: none;
-    color: #fefae0;
-  }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font-family);
+}
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-family: var(--main-font-family);
-  }
+a {
+  text-decoration: none;
+}
 
-    a {
-      text-decoration: none;
-    }
-
-    .main {
-      min-height: 200vh;
-      padding: 6rem 1rem 1rem;
-    }
-
-
+.main {
+  min-height: 200vh;
+  padding: 6rem 1rem 1rem;
+}

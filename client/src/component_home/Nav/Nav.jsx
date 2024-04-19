@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./Nav.module.css";
 
-
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,8 +24,6 @@ function Nav() {
           }
           aria-label="Open menu burger"
         />
-   
-        
       </div>
 
       {isMenuOpen === true && (

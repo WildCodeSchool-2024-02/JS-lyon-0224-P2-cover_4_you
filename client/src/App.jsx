@@ -5,7 +5,6 @@ import Nav from "./component_home/Nav/Nav";
 import Footer from "./component_home/Footer/Footer";
 import SearchBar from "./component_home/Nav/SearchBar";
 
-
 function App() {
   return (
     <>
