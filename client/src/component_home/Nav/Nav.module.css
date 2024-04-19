@@ -1,3 +1,71 @@
 .navbar {
-  background-color: #606c38;
+  background-color: white;
+  height: 17vh;
+  width: 100vw;
+  padding-top: 1.5rem;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo_Cover4You {
+  background-image: url(src/assets/images-navBar/logo_accueil.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 35vw;
+  height: 18vw;
+  margin: 0rem;
+  padding: 0.1rem;
+  padding-left: 4rem;
+  z-index: 0;
+}
+
+/* Menu ouvert + icone croix */
+.burger_nav_open {
+  background-image: url(src/assets/images-navBar/close.svg);
+  border: none;
+  background-size: 35px;
+  height: 10vh;
+  width: 4vw;
+  z-index: 3;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  padding-top: 2rem;
+  padding-left: 3rem;
+}
+/* Menu fermer + menu burger */
+.cross_nav_close {
+  background-image: url(src/assets/images-navBar/burger2.png);
+  border: none;
+  background-color: transparent;
+  background-size: 35px;
+  height: 20vh;
+  width: 14vw;
+  z-index: 3;
+  background-repeat: no-repeat;
+}
+
+.navbar_links_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color);
+  position: relative;
+
+  z-index: 1;
+}
+
+.navbar_links_items > a {
+  font-size: 2rem;
+  color: white;
+}
+
+.navbar_route {
+  cursor: pointer;
 }
