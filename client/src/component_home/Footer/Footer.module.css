@@ -1,6 +1,6 @@
 ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  grid-template-columns: repeat(4, 1fr);
   list-style-type: none;
   font-style: normal;
   font-family: sans-serif;
@@ -41,7 +41,6 @@ article {
 
 figure {
   display: flex;
-  /*justify-content: center;*/
   border: 20px;
   padding: 10px;
 }
@@ -52,8 +51,8 @@ figure img {
 }
 
 #footer-container {
-  display: flex; /* Utilisez flexbox pour placer les éléments sur la même ligne */
-  justify-content: center; /* Alignez les éléments horizontalement au centre */
+  display: flex;
+  justify-content: center;
 }
 
 .alignLogo {
