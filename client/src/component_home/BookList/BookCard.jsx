@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./ListBooks.module.css";
+import styles from "./BookList.module.css";
+import ButtonFavorite from "../ButtonFav/ButtonFav";
 
 export default function BookCard({ book }) {
   function canDisplay(element) {
@@ -11,17 +13,16 @@ export default function BookCard({ book }) {
   return (
     <div className={styles.globalBook}>
       <h2 className={styles.titleBook}>{canDisplay("title")} </h2>
-      <p className={styles.author}>Author : {canDisplay("author_name")} </p>
-      <p>Year : {canDisplay("first_publish_year")}</p>
-
       <img
         src={`https://covers.openlibrary.org/b/ISBN/${isbnKey}-M.jpg`}
-        alt=""
+        alt={book.title}
       />
-
       <div className={styles.button}>
-        <button type="button">Customise</button>
-        <button type="button">🤍</button>
+        <Link to={`/book-page/${isbnKey}`}>
+          <button type="button">Customise</button>
+        </Link>
+
+        <ButtonFavorite />
       </div>
     </div>
   );
@@ -29,6 +30,7 @@ export default function BookCard({ book }) {
 
 BookCard.propTypes = {
   book: PropTypes.shape({
+    title: PropTypes.string,
     isbn: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };

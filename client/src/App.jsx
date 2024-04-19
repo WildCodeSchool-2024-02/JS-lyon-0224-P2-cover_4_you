@@ -1,26 +1,22 @@
 // CSS GLOBAL //
 import "./App.module.css";
-import Nav from "./component_accueil/Nav/Nav";
-import Books from "./component_accueil/ListBooks/ListBooks";
+import { Outlet } from "react-router-dom";
+import Nav from "./component_home/Nav/Nav";
+import SearchBar from "./component_home/SearchBar/SearchBar";
+import Footer from "./component_home/Footer/Footer";
 
 function App() {
   return (
-    <main>
+    <>
       <header>
-        <h1>Cover4You</h1>
         <Nav />
+        <SearchBar />
       </header>
-
-      <section>
-        <div>
-          <Books />
-        </div>
-      </section>
-
-      <footer>
-        <p>Footer</p>
-      </footer>
-    </main>
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
   );
 }
 
