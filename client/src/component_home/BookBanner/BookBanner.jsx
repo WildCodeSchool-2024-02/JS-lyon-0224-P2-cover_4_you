@@ -13,7 +13,7 @@ export default function BookBanner({ book }) {
     <div className={styles.bookBanner}>
       <img
         src={`https://covers.openlibrary.org/b/ISBN/${isbnKey}-M.jpg`}
-        alt=""
+        alt={book.title}
       />
       <h2 className={styles.title}>{canDisplay("title")}</h2>
       <p className={styles.author}>{canDisplay("author_name")} </p>
@@ -31,6 +31,7 @@ export default function BookBanner({ book }) {
 
 BookBanner.propTypes = {
   book: PropTypes.shape({
-    isbn: PropTypes.arrayOf(PropTypes.string).isRequired,
+    isbn: PropTypes.arrayOf(PropTypes.string),
+    title: PropTypes.string
   }).isRequired,
 };
