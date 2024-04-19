@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Nav.module.css";
-// import styles from "../../App.module.css";
+
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ function Nav() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.nav_container}>
-        <div className={styles.logo_Cover4You}/>
+        <div className={styles.logo_Cover4You} />
 
         <button
           id="button_navbar"
@@ -21,11 +21,12 @@ function Nav() {
           className={
             isMenuOpen === true
               ? styles.burger_nav_open
-              
               : styles.cross_nav_close
           }
           aria-label="Open menu burger"
         />
+   
+        
       </div>
 
       {isMenuOpen === true && (
@@ -35,7 +36,7 @@ function Nav() {
               <a href={styles.navbar_route}>Our Librairie</a>
             </li>
             <li className={styles.navbar_links_items}>
-              <a href={styles.navbar_route}>Our Teams</a>
+              <a href={styles.navbar_route}>Our </a>
             </li>
             <li className={styles.navbar_links_items}>
               <a href={styles.navbar_route}>My basket</a>

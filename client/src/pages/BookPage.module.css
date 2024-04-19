@@ -1,0 +1,19 @@
+.BookSelect {
+  background-color: #fefae0;
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.BookSelect img {
+  width: 100px;
+}
+
+.BookSelect p {
+  display: flex;
+  flex-direction: column;
+}
+
+.BookSelect h2 {
+  align-items: start;
+}

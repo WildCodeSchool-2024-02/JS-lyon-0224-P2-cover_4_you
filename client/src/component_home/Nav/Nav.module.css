@@ -1,29 +1,25 @@
 .navbar {
-  background-color: var(--main-color);
-  height: 16vh;
+  background-color: white;
+  height: 17vh;
   width: 100vw;
-  padding: 0rem;
+  padding-top: 1.5rem;
 }
 
 .nav_container {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
 }
-
-/* .burger_menu_container {
- 
 
 /* LOGO */
 .logo_Cover4You {
   background-image: url(src/assets/images/Navbar/logo_accueil.png);
   background-repeat: no-repeat;
-  background-size: 18vh;
-  width: 50vw;
-  height: auto;
+  background-size: cover;
+  width: 35vw;
+  height: 18vw;
   margin: 0rem;
   padding: 0.1rem;
-  padding-left: 2rem;
+  padding-left: 4rem;
   z-index: 0;
 }
 
@@ -35,6 +31,7 @@
   height: 10vh;
   width: 4vw;
   z-index: 3;
+  background-color: transparent;
   background-repeat: no-repeat;
   padding-top: 2rem;
   padding-left: 3rem;
@@ -54,24 +51,21 @@
 .navbar_links_container {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
   background-color: var(--main-color);
   position: relative;
-  padding-bottom: 15rem;
-  z-index: 3;
+
+  z-index: 1;
 }
 
 .navbar_links_items > a {
   font-size: 2rem;
   color: white;
-  padding: 2rem 4rem;
 }
 
 .navbar_route {
   cursor: pointer;
-  background-color: aliceblue;
 }

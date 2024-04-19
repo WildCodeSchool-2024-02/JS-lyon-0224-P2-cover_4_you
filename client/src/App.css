@@ -46,6 +46,7 @@
 
 body {
   margin: 0rem;
+  background-color: var(--light-color);
 }
 
 h1 {
@@ -53,6 +54,8 @@ h1 {
   font-size: calc(1.5 * --title-font-size);
   color: var(--main-color);
   margin: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
@@ -65,14 +68,14 @@ h2 {
 h3 {
   font-family: var(--title-font-family);
   font-size: var(--title-font-size);
-  color: var(--third-color);
+  color: var(--secondary-color);
   margin: 0.5rem;
 }
 
 p {
   font-family: var(--main-font-family);
   font-size: var(--title-font-size);
-  color: var(--third-color);
+  color: black;
   margin: 0.5rem;
 }
 
@@ -115,8 +118,3 @@ ul li {
     }
 
 
-logo {
-  max-width: 0.8rem;
-  max-height: 0.5rem;
-  border-radius: 0.5rem;
-}

@@ -1,7 +1,12 @@
+.homeBooks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .globalBook {
   background-color: #fefae0;
   box-shadow: 0px 10px 10px gray;
-  border: 2px solid #bc6c25;
+  border: 2px solid #4a1b20;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -15,8 +20,9 @@
   font-size: 20px;
 }
 
-h2 {
+.globalBook h2 {
   text-align: center;
+  min-height: 6rem;
 }
 
 p {
@@ -26,6 +32,8 @@ p {
 img,
 button {
   margin: 10px;
+  cursor: pointer;
+  padding: auto;
 }
 
 .button {

@@ -1,0 +1,72 @@
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  list-style-type: none;
+  font-style: normal;
+  font-family: sans-serif;
+  margin: auto;
+  color: var(--light-color);
+}
+
+footer > section {
+  background-color: #606c38;
+  padding: 24px;
+  padding-right: 2px;
+}
+
+footer p {
+  color: var(--light-color);
+  padding: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+ul li {
+  font-size: 0.65rem;
+  margin: auto;
+}
+
+b {
+  font-size: small;
+}
+
+article {
+  display: flex;
+  padding: 2px;
+  margin: 20px;
+}
+
+figure {
+  display: flex;
+  /*justify-content: center;*/
+  border: 20px;
+  padding: 10px;
+}
+
+/*------Marge entre les images-------*/
+figure img {
+  margin: 30px;
+}
+
+#footer-container {
+  display: flex; /* Utilisez flexbox pour placer les éléments sur la même ligne */
+  justify-content: center; /* Alignez les éléments horizontalement au centre */
+}
+
+.alignLogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .alignLogo {
+    flex-direction: column;
+  }
+}
+/*-----Enlever le blanc sous le footer------*/
+body {
+  line-height: 2rem;
+}
