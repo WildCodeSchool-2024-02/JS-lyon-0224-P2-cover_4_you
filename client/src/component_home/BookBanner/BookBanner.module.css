@@ -7,7 +7,7 @@
 .bookBanner > * {
   align-self: center;
 }
-.bookBanner >img {
+.bookBanner > img {
   grid-row: 1/5;
   height: 20vh;
 }

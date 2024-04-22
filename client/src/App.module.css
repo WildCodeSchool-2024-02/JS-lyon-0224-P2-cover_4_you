@@ -91,6 +91,8 @@ button {
   border-radius: 1rem;
 }
 
-ul li {
+ul,
+li,
+a {
   text-decoration: none;
 }

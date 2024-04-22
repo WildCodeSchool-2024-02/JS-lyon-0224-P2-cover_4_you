@@ -32,6 +32,6 @@ export default function BookBanner({ book }) {
 BookBanner.propTypes = {
   book: PropTypes.shape({
     isbn: PropTypes.arrayOf(PropTypes.string),
-    title: PropTypes.string
+    title: PropTypes.string,
   }).isRequired,
 };

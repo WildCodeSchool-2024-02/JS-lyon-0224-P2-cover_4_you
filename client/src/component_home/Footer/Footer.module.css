@@ -1,3 +1,4 @@
+.removeHalf,
 ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -6,12 +7,12 @@ ul {
   font-family: sans-serif;
   margin: auto;
   color: var(--light-color);
+  text-align: center;
 }
 
 footer > section {
   background-color: #606c38;
-  padding: 24px;
-  padding-right: 2px;
+  padding: 5px;
 }
 
 footer p {
@@ -23,8 +24,9 @@ footer p {
   font-family: sans-serif;
 }
 
-ul li {
-  font-size: 0.65rem;
+ul,
+li {
+  font-size: 0.75rem;
   margin: auto;
 }
 
@@ -58,12 +60,15 @@ figure img {
 .alignLogo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 @media screen and (max-width: 600px) {
   .alignLogo {
     flex-direction: column;
+  }
+  .removeHalf {
+    display: none;
   }
 }
 /*-----Enlever le blanc sous le footer------*/

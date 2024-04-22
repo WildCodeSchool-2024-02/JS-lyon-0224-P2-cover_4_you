@@ -17,6 +17,8 @@ function Footer() {
           <li>
             <b>To discover</b>
           </li>
+        </ul>
+        <div className={styles.removeHalf}>
           <li>Help</li>
           <li>Trades</li>
           <li>A question?</li>
@@ -37,7 +39,7 @@ function Footer() {
           <li>Projects</li>
           <li>Contact</li>
           <li>Join us</li>
-        </ul>
+        </div>
       </section>
       <section className={styles.alignLogo}>
         <article>
@@ -55,7 +57,6 @@ function Footer() {
               style={{ width: "30px", height: "30px" }}
             />
           </div>
-
           <div id="logo-insta">
             <img
               src="src/assets/images-footer/icons8-instagram.svg"
@@ -72,7 +73,7 @@ function Footer() {
           </div>
         </article>
         <div id="a">
-          <p>Copyright© 2024|</p>
+          <p>| Copyright© 2024 |</p>
         </div>
         <article>
           <div>
