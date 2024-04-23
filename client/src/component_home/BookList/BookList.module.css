@@ -1,6 +1,7 @@
 .homeBooks {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .globalBook {
@@ -11,7 +12,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 200px;
+  justify-content: space-between;
+  max-width: 150px;
+  margin: 20px;
+}
+
+.globalBook > img {
+  max-width: 120px;
   margin: 20px;
 }
 
@@ -22,13 +29,14 @@
 .globalBook h2 {
   text-align: center;
   min-height: 6rem;
+  font-size: 15px;
 }
 
 p {
   font-size: 1rem;
 }
 
-img,
+.globalBook > img,
 button {
   margin: 10px;
   cursor: pointer;

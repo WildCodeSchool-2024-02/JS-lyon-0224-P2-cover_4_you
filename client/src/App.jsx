@@ -10,9 +10,9 @@ function App() {
     <>
       <header>
         <Nav />
-        <SearchBar />
       </header>
       <main>
+        <SearchBar />
         <Outlet />
       </main>
       <Footer />
