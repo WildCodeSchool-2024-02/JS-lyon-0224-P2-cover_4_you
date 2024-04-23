@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./BookStyle.module.css";
 
+
 function BookStyle() {
   const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
