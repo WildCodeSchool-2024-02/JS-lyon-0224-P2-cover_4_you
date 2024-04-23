@@ -91,12 +91,8 @@ button {
   border-radius: 1rem;
 }
 
-ul li {
+ul,
+li,
+a {
   text-decoration: none;
-}
-
-logo {
-  max-width: 0.8rem;
-  max-height: 0.5rem;
-  border-radius: 0.5rem;
 }

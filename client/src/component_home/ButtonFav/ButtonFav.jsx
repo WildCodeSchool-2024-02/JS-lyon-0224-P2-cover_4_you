@@ -7,7 +7,7 @@ function ButtonFavorite() {
   return (
     <button
       type="button"
-      className={`${styles.icon} ${favorite ? styles.isFavorite : ""}`}
+      className={`${styles.icon} ${favorite === true ? styles.isFavorite : ""}`}
       onClick={() => {
         setFavorite(!favorite);
       }}
