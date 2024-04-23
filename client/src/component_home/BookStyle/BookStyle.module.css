@@ -1,7 +1,4 @@
-.BookStyle {
-  display: flex;
-}
-img {
-  width: "190px";
-  height: "250px";
+.BookStyle > * {
+  width: 190px;
+  height: 260px;
 }
