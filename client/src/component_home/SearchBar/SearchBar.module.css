@@ -1,8 +1,10 @@
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .searchBar {
-  width: 50vw;
-  padding-left: 2px;
+  border-radius: 5rem;
+  width: 55%;
+  padding-left: 10px;
+  /* min-width: 50vw; */
 }

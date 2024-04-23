@@ -25,7 +25,7 @@
   background-image: url(src/assets/images-navBar/close.svg);
   border: none;
   background-size: 35px;
-  height: 20vh;
+  height: 15vh;
   width: 10vw;
   z-index: 3;
   background-color: transparent;
@@ -39,10 +39,11 @@
   border: none;
   background-color: transparent;
   background-size: 35px;
-  height: 10vh;
+  height: 15vh;
   width: 10vw;
   z-index: 3;
   background-repeat: no-repeat;
+  padding-left: 3rem;
 }
 
 .navbar_links_container {
