@@ -1,9 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./BookPage.module.css";
+import { ToastContainer, toast } from "react-toastify";
+import bookPageStyles from "./BookPage.module.css";
+import "react-toastify/dist/ReactToastify.css";
+import toastStyles from "./Toastify.module.css";
 
 function BookPage() {
+  const notifyInfo = () => toast.info("Thank you for your order!👍");
+
   const { isbn } = useParams("page-book");
   const [book, setBook] = useState(null);
   const [imageSrc, setImageSrc] = useState(
@@ -44,9 +49,9 @@ function BookPage() {
         {book !== null && (
           <div>
             <h2>{book.title}</h2>
-            <div className={styles.BookSelect}>
+            <div className={bookPageStyles.BookSelect}>
               <img src={imageSrc} alt="book cover" id="bookCover" />
-              <p className={styles.author}>
+              <p className={bookPageStyles.author}>
                 Author : {canDisplay("author_name")}{" "}
               </p>
               <p>Year : {canDisplay("first_publish_year")}</p>
@@ -59,7 +64,7 @@ function BookPage() {
         <p>...</p>
       </div>
 
-      <div className={styles.BookCover}>
+      <div className={bookPageStyles.BookCover}>
         <label htmlFor="userCover">
           <button
             type="button"
@@ -75,7 +80,16 @@ function BookPage() {
             accept="image/*"
           />
         </label>
-        <button type="button">Order</button>
+        <div className={toastStyles.profil_container}>
+          <button
+            type="button"
+            className={`nes-btn is-red ${toastStyles.logout_btn}`}
+            onClick={notifyInfo}
+          >
+            Order
+          </button>
+          <ToastContainer />
+        </div>
       </div>
     </main>
   );
