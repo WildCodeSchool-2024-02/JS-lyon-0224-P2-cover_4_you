@@ -1,17 +1,1 @@
-.container p {
-  text-align: center;
-  color: #e43535;
-}
 
-.image-container {
-  display: flex;
-  justify-content: center;
-}
-
-.image-container img {
-  margin: 0 10px;
-}
-
-.book-image {
-  margin: 0 10px;
-}
