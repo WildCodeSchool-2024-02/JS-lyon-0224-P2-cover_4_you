@@ -39,7 +39,7 @@
 * {
   padding: 0rem;
   margin: 0rem;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body {

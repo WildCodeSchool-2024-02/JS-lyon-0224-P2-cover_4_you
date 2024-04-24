@@ -14,7 +14,6 @@ export default function SearchBar() {
 
   return (
     <div className={styles.container}>
-      <label htmlFor="searchInput">Enter your search:</label>
       <input
         type="text"
         id="searchInput"
@@ -24,7 +23,7 @@ export default function SearchBar() {
         onKeyDown={handleKeyDown}
         placeholder="Search by title, author, theme, etc."
       />
-      <Link to={`/result-page/:${encodeURIComponent(query)}`}>Search</Link>
+      <Link to={`/result-page/:${encodeURIComponent(query)}`}>&#128270;</Link>
     </div>
   );
 }
