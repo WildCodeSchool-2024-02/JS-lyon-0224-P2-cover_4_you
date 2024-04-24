@@ -9,7 +9,13 @@ export default function SearchBar() {
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       navigate(`/result-page/:${encodeURIComponent(query)}`);
+      setQuery("");
     }
+  };
+
+  const handleSubmit = () => {
+    navigate(`/result-page/:${encodeURIComponent(query)}`);
+    setQuery("");
   };
 
   return (
@@ -23,7 +29,12 @@ export default function SearchBar() {
         onKeyDown={handleKeyDown}
         placeholder="Search by title, author, theme, etc."
       />
-      <Link to={`/result-page/:${encodeURIComponent(query)}`}>&#128270;</Link>
+      <Link
+        to={`/result-page/:${encodeURIComponent(query)}`}
+        onClick={handleSubmit}
+      >
+        &#128270;
+      </Link>
     </div>
   );
 }
