@@ -6,6 +6,9 @@ import styles from "./BookPage.module.css";
 function BookPage() {
   const { isbn } = useParams("page-book");
   const [book, setBook] = useState(null);
+  const [imageSrc, setImageSrc] = useState(
+    `https://covers.openlibrary.org/b/ISBN/${isbn}-M.jpg`
+  );
 
   function canDisplay(element) {
     return book !== null ? book[element] : "Loading...";
@@ -23,6 +26,17 @@ function BookPage() {
     }
   }, []);
 
+  function displayImage(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function changeImg(e) {
+      setImageSrc(e.target.result);
+    };
+
+    reader.readAsDataURL(file);
+  }
+
   return (
     <main>
       <div>
@@ -31,10 +45,7 @@ function BookPage() {
           <div>
             <h2>{book.title}</h2>
             <div className={styles.BookSelect}>
-              <img
-                src={`https://covers.openlibrary.org/b/ISBN/${isbn}-M.jpg`}
-                alt="cover book"
-              />
+              <img src={imageSrc} alt="book cover" id="bookCover" />
               <p className={styles.author}>
                 Author : {canDisplay("author_name")}{" "}
               </p>
@@ -47,6 +58,14 @@ function BookPage() {
         <h3>Synopsis :</h3>
         <p>...</p>
       </div>
+      <label htmlFor="userCover">Choose your own cover :</label>
+      <input
+        type="file"
+        id="userCover"
+        name="userCover"
+        onChange={displayImage}
+        accept="image/*"
+      />
     </main>
   );
 }
