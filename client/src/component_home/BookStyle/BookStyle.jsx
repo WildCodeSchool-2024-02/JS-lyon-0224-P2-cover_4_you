@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "./BookStyle.module.css";
 
-
 function BookStyle() {
   const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,13 +45,19 @@ function BookStyle() {
   };
 
   return (
-    <div>
+    <div className="container">
       <p>
         <b>Our personalizations</b>
       </p>
-      {getNextImages().map((image, index) => (
-        <img key={index.id} src={image} alt={`livre${currentIndex + index + 1}`} />
-      ))}
+      <div className="image-container">
+        {getNextImages().map((image, index) => (
+          <img
+            key={index.id}
+            src={image}
+            alt={`livre${currentIndex + index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
