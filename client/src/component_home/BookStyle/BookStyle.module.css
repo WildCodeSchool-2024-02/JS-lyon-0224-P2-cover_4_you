@@ -1,17 +1,23 @@
-.container p {
+.containerBook {
   text-align: center;
-  color: #e43535;
 }
 
-.image-container {
+.imageContainer {
   display: flex;
   justify-content: center;
 }
 
-.image-container img {
+.imageContainer img {
+  border: solid #329649;
   margin: 0 10px;
+  height: 180px;
 }
 
 .book-image {
   margin: 0 10px;
+}
+
+.BookStyle {
+  display: flex;
+  justify-content: center;
 }

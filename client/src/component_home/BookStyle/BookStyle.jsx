@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./BookStyle.module.css";
+import styles from "./BookStyle.module.css";
 
 function BookStyle() {
   const [images, setImages] = useState([]);
@@ -45,11 +45,11 @@ function BookStyle() {
   };
 
   return (
-    <div className="container">
+    <div className={styles.containerBook}>
       <p>
-        <b>Our personalizations</b>
+        <h2>Our personalizations</h2>
       </p>
-      <div className="image-container">
+      <div className={styles.imageContainer}>
         {getNextImages().map((image, index) => (
           <img
             key={index.id}
