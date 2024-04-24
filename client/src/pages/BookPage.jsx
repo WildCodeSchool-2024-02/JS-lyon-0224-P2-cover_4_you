@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "./BookPage.module.css";
 
 function BookPage() {
@@ -46,11 +46,6 @@ function BookPage() {
       <div>
         <h3>Synopsis :</h3>
         <p>...</p>
-      </div>
-      <div>
-        <Link to="/">
-          <button type="button">Return Home</button>
-        </Link>
       </div>
     </main>
   );
