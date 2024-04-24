@@ -58,13 +58,25 @@ function BookPage() {
         <h3>Synopsis :</h3>
         <p>...</p>
       </div>
-      <input
-        type="file"
-        id="userCover"
-        name="userCover"
-        onChange={displayImage}
-        accept="image/*"
-      />
+
+      <div className={styles.BookCover}>
+        <label htmlFor="userCover">
+          <button
+            type="button"
+            onClick={() => document.getElementById("userCover").click()}
+          >
+            Import your cover
+          </button>
+          <input
+            type="file"
+            id="userCover"
+            name="userCover"
+            onChange={displayImage}
+            accept="image/*"
+          />
+        </label>
+        <button type="button">Order</button>
+      </div>
     </main>
   );
 }
