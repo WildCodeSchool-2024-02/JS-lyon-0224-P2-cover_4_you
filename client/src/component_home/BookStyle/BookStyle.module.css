@@ -1,4 +1,4 @@
-.containerBook {
+.containerBook p {
   text-align: center;
 }
 
@@ -8,14 +8,14 @@
 }
 
 .imageContainer img {
-  border: solid #329649;
+  border: solid #08451c;
   margin: 0 10px;
-  height: 180px;
+  height: 190px;
 }
 
-.book-image {
+/*.book-image {
   margin: 0 10px;
-}
+} */
 
 .BookStyle {
   display: flex;
