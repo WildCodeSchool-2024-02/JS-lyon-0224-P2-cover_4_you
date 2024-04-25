@@ -46,8 +46,8 @@ function BookStyle() {
 
   return (
     <div className={styles.containerBook}>
-      <p>
-        <h2>Our personalizations</h2>
+      <p className={styles.paragraph}>
+        <h2 className={styles.colorTitle}>Find your farorite book covers</h2>
       </p>
       <div className={styles.imageContainer}>
         {getNextImages().map((image, index) => (
