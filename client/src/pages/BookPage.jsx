@@ -1,9 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./BookPage.module.css";
+import { toast } from "react-toastify";
+import Styles from "./BookPage.module.css";
 
 function BookPage() {
+  const notifySuccess = () =>
+    toast.success(" Order completed ! 💳 ", {
+      className: Styles.customToast,
+    });
+
   const { isbn } = useParams("page-book");
   const [book, setBook] = useState(null);
   const [imageSrc, setImageSrc] = useState(
@@ -44,9 +50,9 @@ function BookPage() {
         {book !== null && (
           <div>
             <h2>{book.title}</h2>
-            <div className={styles.BookSelect}>
+            <div className={Styles.BookSelect}>
               <img src={imageSrc} alt="book cover" id="bookCover" />
-              <p className={styles.author}>
+              <p className={Styles.author}>
                 Author : {canDisplay("author_name")}{" "}
               </p>
               <p>Year : {canDisplay("first_publish_year")}</p>
@@ -59,7 +65,7 @@ function BookPage() {
         <p>...</p>
       </div>
 
-      <div className={styles.BookCover}>
+      <div className={Styles.BookCover}>
         <label htmlFor="userCover">
           <button
             type="button"
@@ -75,7 +81,11 @@ function BookPage() {
             accept="image/*"
           />
         </label>
-        <button type="button">Order</button>
+        <div>
+          <button type="button" onClick={notifySuccess}>
+            Order
+          </button>
+        </div>
       </div>
     </main>
   );
