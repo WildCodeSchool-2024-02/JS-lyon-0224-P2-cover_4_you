@@ -43,7 +43,9 @@
   display: inline-block;
 }
 
-/*.paragraph:hover {
-  box-shadow: 0 0 35px rgba(82, 18, 192, 0.5);
-transform: scale(1.12);
-} */
+@media screen and (max-width: 600px) {
+  .imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -38,7 +38,7 @@ function BookStyle() {
 
   const getNextImages = () => {
     const nextImages = [];
-    for (let i = 0; i < 3; i += 1) {
+    for (let i = 0; i < 4; i += 1) {
       nextImages.push(images[(currentIndex + i) % images.length]);
     }
     return nextImages;
