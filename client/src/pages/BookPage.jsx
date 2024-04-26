@@ -43,6 +43,13 @@ function BookPage() {
     reader.readAsDataURL(file);
   }
 
+  const maxLength = 2;
+  const synopsis = book !== null ? book.first_sentence : "Loading...";
+  const truncatedSynopsis =
+    synopsis.length > maxLength
+      ? `${synopsis.slice(0, maxLength)}...`
+      : synopsis;
+
   return (
     <main>
       <div>
@@ -52,17 +59,18 @@ function BookPage() {
             <h2>{book.title}</h2>
             <div className={Styles.BookSelect}>
               <img src={imageSrc} alt="book cover" id="bookCover" />
-              <p className={Styles.author}>
-                Author : {canDisplay("author_name")}{" "}
-              </p>
-              <p>Year : {canDisplay("first_publish_year")}</p>
+              <div className={Styles.ContainerBook}>
+                <p>Author : {canDisplay("author_name")} </p>
+                <p>Year : {canDisplay("first_publish_year")}</p>
+                <p>Number of pages : {canDisplay("number_of_pages_median")}</p>
+              </div>
             </div>
           </div>
         )}
       </div>
       <div>
-        <h3>Synopsis :</h3>
-        <p>...</p>
+        <h3>Extract :</h3>
+        <p>{truncatedSynopsis}</p>
       </div>
 
       <div className={Styles.BookCover}>
