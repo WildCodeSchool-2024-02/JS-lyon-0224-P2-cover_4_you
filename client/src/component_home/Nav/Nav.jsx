@@ -11,8 +11,9 @@ function Nav() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.nav_container}>
-        <div className={styles.logo_Cover4You} />
-
+        <a className={styles.logo_Cover4You} href="/">
+          {/* LogoHome */}
+        </a>
         <button
           id="button_navbar"
           type="button"

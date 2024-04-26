@@ -1,9 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import styles from "./BookPage.module.css";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import Styles from "./BookPage.module.css";
 
 function BookPage() {
+  const notifySuccess = () =>
+    toast.success(" Order completed ! 💳 ", {
+      className: Styles.customToast,
+    });
+
   const { isbn } = useParams("page-book");
   const [book, setBook] = useState(null);
   const [imageSrc, setImageSrc] = useState(
@@ -44,9 +50,9 @@ function BookPage() {
         {book !== null && (
           <div>
             <h2>{book.title}</h2>
-            <div className={styles.BookSelect}>
+            <div className={Styles.BookSelect}>
               <img src={imageSrc} alt="book cover" id="bookCover" />
-              <p className={styles.author}>
+              <p className={Styles.author}>
                 Author : {canDisplay("author_name")}{" "}
               </p>
               <p>Year : {canDisplay("first_publish_year")}</p>
@@ -58,18 +64,28 @@ function BookPage() {
         <h3>Synopsis :</h3>
         <p>...</p>
       </div>
-      <label htmlFor="userCover">Choose your own cover :</label>
-      <input
-        type="file"
-        id="userCover"
-        name="userCover"
-        onChange={displayImage}
-        accept="image/*"
-      />
-      <div>
-        <Link to="/">
-          <button type="button">Return Home</button>
-        </Link>
+
+      <div className={Styles.BookCover}>
+        <label htmlFor="userCover">
+          <button
+            type="button"
+            onClick={() => document.getElementById("userCover").click()}
+          >
+            Import your cover
+          </button>
+          <input
+            type="file"
+            id="userCover"
+            name="userCover"
+            onChange={displayImage}
+            accept="image/*"
+          />
+        </label>
+        <div>
+          <button type="button" onClick={notifySuccess}>
+            Order
+          </button>
+        </div>
       </div>
     </main>
   );

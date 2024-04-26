@@ -17,3 +17,21 @@
 .BookSelect h2 {
   align-items: start;
 }
+
+.BookCover {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.BookCover input[type="file"] {
+  display: none;
+}
+
+.customToast {
+  color: #fefae0;
+  background-color: #4a1b20;
+  --toastify-color-progress-success: #fefae0;
+  --toastify-icon-color-success: #fefae0;
+}
