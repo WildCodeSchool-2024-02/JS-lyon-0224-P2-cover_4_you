@@ -8,8 +8,6 @@ import Home from "./pages/Home";
 import BookPage from "./pages/BookPage";
 import ResultPage from "./pages/ResultPage";
 
-import GetBook from "./GetBook";
-
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -19,7 +17,6 @@ const router = createBrowserRouter([
         path: "/",
         id: "home",
         element: <Home />,
-        loader: () => GetBook(),
       },
       {
         path: "/book-page/:isbn",
