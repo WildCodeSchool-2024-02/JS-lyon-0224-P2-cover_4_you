@@ -1,7 +1,7 @@
 .BookSelect {
   background-color: #fefae0;
   display: flex;
-  align-items: flex-start;
+  justify-content: space-around;
   margin: 20px;
 }
 
@@ -34,4 +34,11 @@
   background-color: #4a1b20;
   --toastify-color-progress-success: #fefae0;
   --toastify-icon-color-success: #fefae0;
+}
+
+.ContainerBook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

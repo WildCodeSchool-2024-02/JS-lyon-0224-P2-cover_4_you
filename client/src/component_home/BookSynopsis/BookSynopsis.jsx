@@ -31,7 +31,6 @@ export default function BookSynopsis() {
     <main>
       <div>
         <h3>Book synopsis : </h3>
-
         <p>{bookSynopsis}</p>
       </div>
     </main>

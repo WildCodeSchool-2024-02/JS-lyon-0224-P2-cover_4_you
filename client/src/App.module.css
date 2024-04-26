@@ -51,7 +51,7 @@ h1 {
   font-family: var(--title-font-family);
   font-size: calc(1.5 * --title-font-size);
   color: var(--main-color);
-  margin: 0.5rem;
+  margin: 2.5rem;
   display: flex;
   justify-content: center;
 }
