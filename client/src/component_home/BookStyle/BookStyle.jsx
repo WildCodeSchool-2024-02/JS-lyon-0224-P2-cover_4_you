@@ -12,16 +12,15 @@ function BookStyle() {
           'https://openlibrary.org/search.json?q=ebook_access:[borrowable TO *] -key:"/works/OL38986W" author_key:(OL19441A)'
         );
         const data = await response.json();
-        // Extraction URLs des couvertures des neuf premiers résultats.
-        const covers =
+        // Extraction des neuf premiers résultats avec couverture et prix fictif
+        const books =
           data?.docs
             ?.slice(0, 9)
-            .map((book) =>
-              book.cover_i
-                ? `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`
-                : ""
-            ) || [];
-        setImages(covers);
+            .map((book) => ({
+              coverUrl: book.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg` : "",
+              price: Math.floor(Math.random() * (11 - 5 + 1)) + 5
+            })) || [];
+        setImages(books);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -34,7 +33,7 @@ function BookStyle() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []);
 
   const getNextImages = () => {
     const nextImages = [];
@@ -47,15 +46,14 @@ function BookStyle() {
   return (
     <div className={styles.containerBook}>
       <p className={styles.paragraph}>
-        <h2 className={styles.colorTitle}>Find your farorite book covers</h2>
+        <h2 className={styles.colorTitle}>Find your favorite book covers</h2>
       </p>
       <div className={styles.imageContainer}>
-        {getNextImages().map((image, index) => (
-          <img
-            key={index.id}
-            src={image}
-            alt={`livre${currentIndex + index + 1}`}
-          />
+        {getNextImages().map((book, index) => (
+          <div key={index.id} className={styles.book}>
+            <img src={book.coverUrl} alt={`livre${currentIndex + index + 1}`} />
+            <p>{`Price: ${book.price} euros`}</p>
+          </div>
         ))}
       </div>
     </div>
