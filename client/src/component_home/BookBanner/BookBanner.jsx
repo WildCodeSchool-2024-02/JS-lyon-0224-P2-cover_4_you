@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./BookBanner.module.css";
 import ButtonFav from "../ButtonFav/ButtonFav";
-import BookSynopsis from "../BookSynopsis/BookSynopsis";
 
 export default function BookBanner({ book, setIsLoading }) {
   const isbnKey = book.isbn[0];
@@ -28,9 +27,6 @@ export default function BookBanner({ book, setIsLoading }) {
       <h2 className={styles.title}>{canDisplay("title")}</h2>
       <p className={styles.author}>{canDisplay("author_name")} </p>
       <p className={styles.year}>{canDisplay("first_publish_year")}</p>
-      <div className={styles.synopsis}>
-        <BookSynopsis />
-      </div>
       <div className={styles.buttonFav}>
         <ButtonFav />
       </div>

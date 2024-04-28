@@ -43,12 +43,14 @@ function BookPage() {
     reader.readAsDataURL(file);
   }
 
-  const maxLength = 2;
-  const synopsis = book !== null ? book.first_sentence : "Loading...";
-  const truncatedSynopsis =
-    synopsis.length > maxLength
-      ? `${synopsis.slice(0, maxLength)}...`
-      : synopsis;
+  //  const allText = book.first_sentence
+  const extract = book !== null ? book.first_sentence : "Loading...";
+  const maxLength = 1;
+  const truncatedExtract =
+    extract.length > maxLength ? `${extract.slice(0, maxLength)}...` : extract;
+
+  const [extractDisplay, setExtractDisplay] = useState(true);
+  const displayText = extractDisplay === true ? truncatedExtract : extract;
 
   return (
     <main>
@@ -69,8 +71,17 @@ function BookPage() {
         )}
       </div>
       <div>
-        <h3>Extract :</h3>
-        <p>{truncatedSynopsis}</p>
+        <h3 className={Styles.titleExtract}>Extract :</h3>
+        <p className={Styles.displayText}>
+          {displayText}
+          <button
+            className={Styles.buttonDisplay}
+            type="button"
+            onClick={() => setExtractDisplay(!extractDisplay)}
+          >
+            {extractDisplay ? "Read more" : "See less"}
+          </button>
+        </p>
       </div>
 
       <div className={Styles.BookCover}>

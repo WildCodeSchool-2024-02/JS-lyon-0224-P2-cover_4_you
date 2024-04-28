@@ -80,6 +80,7 @@ p {
 button {
   padding: 0.5rem;
   background-color: var(--main-color);
+  cursor: pointer;
 
   /* texte */
   font-family: var(--title-font-family);
