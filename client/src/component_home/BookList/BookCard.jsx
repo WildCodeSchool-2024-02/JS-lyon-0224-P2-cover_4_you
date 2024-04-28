@@ -19,7 +19,7 @@ export default function BookCard({ book }) {
       />
       <div className={styles.button}>
         <Link to={`/book-page/${isbnKey}`}>
-          <button type="button">Customise</button>
+          <button type="button">Customize</button>
         </Link>
 
         <ButtonFavorite />

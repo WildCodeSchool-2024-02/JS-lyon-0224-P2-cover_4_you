@@ -54,7 +54,7 @@ function BookPage() {
     const numberOfStars = Math.round(averageRating);
     const stars = [];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i += 1) {
       if (i < numberOfStars) {
         stars.push(<span key={i}>&#9733;</span>);
       } else {
@@ -68,65 +68,73 @@ function BookPage() {
   return (
     <main>
       <div>
-        <h1>Customise your book</h1>
+        <h1>Customize your book</h1>
         {book !== null && (
           <div>
             <h2>{book.title}</h2>
-            <img src={imageSrc} alt="book cover" id="bookCover" />
             <div className={Styles.BookSelect}>
+              <img src={imageSrc} alt="book cover" id="bookCover" />
               <div className={Styles.ContainerBook}>
                 <p>Author : {canDisplay("author_name")} </p>
                 <p>Year : {canDisplay("first_publish_year")}</p>
-                <p>Number of pages : {canDisplay("number_of_pages_median")}</p>
+                <p>Pages : {canDisplay("number_of_pages_median")}</p>
               </div>
-              <div className={Styles.RatingsBook}>
-                <h3>Note et avis</h3>
-                <p>Moyenne avis:{canDisplay("ratings_average").toFixed(2)}</p>
-                <p>
-                  Évaluation : {renderStarRating(canDisplay("ratings_average"))}
-                </p>
 
-                <p>Nombre d'avis:{canDisplay("ratings_count")}</p>
-                <p>
-                  5 star
-                  <meter
-                    min="0"
-                    max={canDisplay("ratings_count")}
-                    value={canDisplay("ratings_count_5")}
-                  />
-                </p>
-                <p>
-                  4 star
-                  <meter
-                    min="0"
-                    max={canDisplay("ratings_count")}
-                    value={canDisplay("ratings_count_4")}
-                  />
-                </p>
-                <p>
-                  3 star
-                  <meter
-                    min="0"
-                    max={canDisplay("ratings_count")}
-                    value={canDisplay("ratings_count_3")}
-                  />
-                </p>
-                <p>
-                  2 star
-                  <meter
-                    min="0"
-                    max={canDisplay("ratings_count")}
-                    value={canDisplay("ratings_count_2")}
-                  />
-                </p>
-                <p>
-                  1 star
-                  <meter
-                    min="0"
-                    max={canDisplay("ratings_count")}
-                    value={canDisplay("ratings_count_1")}
-                  />
-                </p>
+              <div className={Styles.RatingsBook}>
+                <div className={Styles.Ratings}>
+                  <p>Ratings</p>
+                  <p>
+                    <strong>
+                      {canDisplay("ratings_average").toFixed(1)}/5
+                    </strong>
+                  </p>
+                  <p>
+                    {renderStarRating(canDisplay("ratings_average").toFixed(1))}
+                  </p>
+                  <p>{canDisplay("ratings_count")} count</p>
+                </div>
+                <div className={Styles.Stars}>
+                  <p>
+                    5
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_5")}
+                    />
+                  </p>
+                  <p>
+                    4
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_4")}
+                    />
+                  </p>
+                  <p>
+                    3
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_3")}
+                    />
+                  </p>
+                  <p>
+                    2
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_2")}
+                    />
+                  </p>
+                  <p>
+                    1
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_1")}
+                    />
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ function ButtonFavorite() {
       type="button"
       className={`${styles.icon} ${favorite === true ? styles.isFavorite : ""}`}
       onClick={() => {
-        if (favorite) {
+        if (favorite === true) {
           notifySuccess("remove");
         } else {
           notifySuccess("add");

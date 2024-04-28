@@ -11,9 +11,7 @@ function Nav() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.nav_container}>
-        <a className={styles.logo_Cover4You} href="/">
-          {/* LogoHome */}
-        </a>
+        <a className={styles.logo_Cover4You} href="/" aria-label="Accueil" />
         <button
           id="button_navbar"
           type="button"

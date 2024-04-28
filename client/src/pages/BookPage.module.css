@@ -1,17 +1,15 @@
 .BookSelect {
   background-color: #fefae0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   margin: 20px;
 }
 
 .BookSelect img {
   width: 150px;
-}
-
-.BookSelect p {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 .BookSelect h2 {
@@ -37,10 +35,6 @@
 }
 
 .ContainerBook {
-  background-color: #fefae0;
-  box-shadow: 0px 10px 10px gray;
-  border: 2px solid #4a1b20;
-  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,12 +42,10 @@
 }
 
 .RatingsBook {
-  background-color: #fefae0;
   box-shadow: 0px 10px 10px gray;
   border: 2px solid #4a1b20;
   border-radius: 25px;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -61,8 +53,37 @@ p {
   margin-block: 1px;
 }
 
-.star {
-  cursor: pointer;
-  font-size: 2rem;
+.Ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Ratings > p {
+  height: 25px;
+}
+
+.Stars > p {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  height: 25px;
+}
+
+p > meter {
   margin: 5px;
+}
+
+p > span {
+  color: #bc6c25;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: #bc6c25;
+}
+
+@media screen and (max-width: 570px) {
+  .RatingsBook {
+    margin-top: 20px;
+  }
 }

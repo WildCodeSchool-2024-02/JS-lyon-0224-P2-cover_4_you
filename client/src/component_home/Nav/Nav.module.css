@@ -62,7 +62,3 @@
   font-size: 2rem;
   color: var(--light-color);
 }
-
-.navbar_route {
-  cursor: pointer;
-}

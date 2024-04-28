@@ -8,14 +8,19 @@ export default function SearchBar() {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      navigate(`/result-page/:${encodeURIComponent(query)}`);
-      setQuery("");
+      if (query.trim().length > 0) {
+        navigate(`/result-page/:${encodeURIComponent(query)}`);
+        setQuery("");
+      } else {
+        event.preventDefault();
+      }
     }
   };
 
-  const handleSubmit = () => {
-    navigate(`/result-page/:${encodeURIComponent(query)}`);
-    setQuery("");
+  const handleSubmit = (event) => {
+    if (query.trim().length === 0) {
+      event.preventDefault();
+    }
   };
 
   return (
@@ -28,6 +33,7 @@ export default function SearchBar() {
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyDown}
         placeholder="Search by title, author, theme, etc."
+        minLength={10}
       />
       <Link
         to={`/result-page/:${encodeURIComponent(query)}`}
