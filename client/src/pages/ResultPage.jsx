@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import BookBanner from "../component_home/BookBanner/BookBanenr";
+import BookBanner from "../component_home/BookBanner/BookBanner";
 import styles from "../ui_components/Loader.module.css";
 
 export default function ResultPage() {
