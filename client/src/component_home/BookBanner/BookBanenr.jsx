@@ -1,36 +1,24 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./BookBanner.module.css";
 import ButtonFav from "../ButtonFav/ButtonFav";
-import BookSynopsis from "../BookSynopsis/BookSynopsis";
 
-export default function BookBanner({ book, setIsLoading }) {
+export default function BookBanner({ book }) {
   const isbnKey = book.isbn[0];
-  const [bookCover, setBookCover] = useState(""); // mettre par défault l'image faite par Laura
 
   function canDisplay(element) {
     return book !== null ? book[element] : "Loading...";
   }
-  useEffect(() => {
-    function fetchCover() {
-      setIsLoading(true);
-      fetch(`https://covers.openlibrary.org/b/ISBN/${isbnKey}-M.jpg`)
-        .then((response) => response.blob())
-        .then((blob) => setBookCover(URL.createObjectURL(blob)))
-        .finally(setIsLoading(false));
-    }
-    fetchCover();
-  });
   return (
     <div className={styles.bookBanner}>
-      <img src={bookCover} alt={book.title} />
+      <img
+        src={`https://covers.openlibrary.org/b/ISBN/${isbnKey}-M.jpg`}
+        alt={book.title}
+      />
       <h2 className={styles.title}>{canDisplay("title")}</h2>
       <p className={styles.author}>{canDisplay("author_name")} </p>
       <p className={styles.year}>{canDisplay("first_publish_year")}</p>
-      <div className={styles.synopsis}>
-        <BookSynopsis />
-      </div>
+      <p className={styles.synopsis}>{canDisplay("first_sentence")}</p>
       <div className={styles.buttonFav}>
         <ButtonFav />
       </div>
@@ -46,5 +34,4 @@ BookBanner.propTypes = {
     isbn: PropTypes.arrayOf(PropTypes.string),
     title: PropTypes.string,
   }).isRequired,
-  setIsLoading: PropTypes.func.isRequired,
 };
