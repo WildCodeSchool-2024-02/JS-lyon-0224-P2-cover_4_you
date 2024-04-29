@@ -6,7 +6,6 @@ import Logo from "../../assets/images-navBar/logo_accueil.png";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const screenDesktop = window.matchMedia("(min-width: 600px)").matches;
 
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 600);
 
