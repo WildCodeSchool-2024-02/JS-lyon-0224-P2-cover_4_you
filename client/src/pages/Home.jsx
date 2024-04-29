@@ -3,6 +3,7 @@ import axios from "axios";
 
 import styles from "../ui_components/Loader.module.css";
 import BookList from "../component_home/BookList/BookList";
+import BookStyle from "../component_home/BookStyle/BookStyle";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,7 @@ export default function Home() {
         </div>
       )}
       <BookList bookList={bookList} />
+      <BookStyle />
     </>
   );
 }
