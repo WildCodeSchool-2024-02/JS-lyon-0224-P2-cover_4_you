@@ -24,9 +24,7 @@
 
   /* Générique */
   --main-font-size: 0.8rem;
-  --main-font-family-sansSerif: "Poppins", sans-serif;
-  --main-font-family-bold: "Poppins", sans-serif, bold;
-  --main-font-family-italic: "Poppins", sans-serif, italic;
+  --main-font-family-sansSerif: "Verdana", "Geneva", "Tahoma", sans-serif;
 
   /* Espace */
   --spacing-little: 0.12rem;
@@ -39,7 +37,6 @@
 * {
   padding: 0rem;
   margin: 0rem;
-  /* box-sizing: border-box; */
 }
 
 body {
@@ -51,7 +48,7 @@ h1 {
   font-family: var(--title-font-family);
   font-size: calc(1.5 * --title-font-size);
   color: var(--main-color);
-  margin: 0.5rem;
+  margin: 2.5rem;
   display: flex;
   justify-content: center;
 }
@@ -80,6 +77,7 @@ p {
 button {
   padding: 0.5rem;
   background-color: var(--main-color);
+  cursor: pointer;
 
   /* texte */
   font-family: var(--title-font-family);

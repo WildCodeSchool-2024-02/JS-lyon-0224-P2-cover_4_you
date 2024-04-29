@@ -43,26 +43,117 @@ function BookPage() {
     reader.readAsDataURL(file);
   }
 
+  //  const allText = book.first_sentence
+  const extract = book !== null ? book.first_sentence : "Loading...";
+  const maxLength = 1;
+  const truncatedExtract =
+    extract.length > maxLength ? `${extract.slice(0, maxLength)}...` : extract;
+
+  const [extractDisplay, setExtractDisplay] = useState(true);
+  const displayText = extractDisplay === true ? truncatedExtract : extract;
+
+  function renderStarRating(averageRating) {
+    const numberOfStars = Math.round(averageRating);
+    const stars = [];
+
+    for (let i = 0; i < 5; i += 1) {
+      if (i < numberOfStars) {
+        stars.push(<span key={i}>&#9733;</span>);
+      } else {
+        stars.push(<span key={i}>&#9734;</span>);
+      }
+    }
+
+    return stars;
+  }
+
   return (
     <main>
       <div>
-        <h1>Customise your book</h1>
+        <h1>Customize your book</h1>
         {book !== null && (
           <div>
             <h2>{book.title}</h2>
             <div className={Styles.BookSelect}>
               <img src={imageSrc} alt="book cover" id="bookCover" />
-              <p className={Styles.author}>
-                Author : {canDisplay("author_name")}{" "}
-              </p>
-              <p>Year : {canDisplay("first_publish_year")}</p>
+              <div className={Styles.ContainerBook}>
+                <p>Author : {canDisplay("author_name")} </p>
+                <p>Year : {canDisplay("first_publish_year")}</p>
+                <p>Pages : {canDisplay("number_of_pages_median")}</p>
+              </div>
+
+              <div className={Styles.RatingsBook}>
+                <div className={Styles.Ratings}>
+                  <p>Ratings</p>
+                  <p>
+                    <strong>
+                      {canDisplay("ratings_average").toFixed(1)}/5
+                    </strong>
+                  </p>
+                  <p>
+                    {renderStarRating(canDisplay("ratings_average").toFixed(1))}
+                  </p>
+                  <p>{canDisplay("ratings_count")} count</p>
+                </div>
+                <div className={Styles.Stars}>
+                  <p>
+                    5
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_5")}
+                    />
+                  </p>
+                  <p>
+                    4
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_4")}
+                    />
+                  </p>
+                  <p>
+                    3
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_3")}
+                    />
+                  </p>
+                  <p>
+                    2
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_2")}
+                    />
+                  </p>
+                  <p>
+                    1
+                    <meter
+                      min="0"
+                      max={canDisplay("ratings_count")}
+                      value={canDisplay("ratings_count_1")}
+                    />
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         )}
       </div>
       <div>
-        <h3>Synopsis :</h3>
-        <p>...</p>
+        <h3 className={Styles.titleExtract}>Extract :</h3>
+        <p className={Styles.displayText}>
+          {displayText}
+          <button
+            className={Styles.buttonDisplay}
+            type="button"
+            onClick={() => setExtractDisplay(!extractDisplay)}
+          >
+            {extractDisplay ? "Read more" : "See less"}
+          </button>
+        </p>
       </div>
 
       <div className={Styles.BookCover}>

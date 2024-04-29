@@ -37,8 +37,8 @@ function BookStyle() {
     fetchData();
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 3) % images.length);
-    }, 5000);
+      setCurrentIndex((prevIndex) => (prevIndex + 4) % images.length);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [images.length]);

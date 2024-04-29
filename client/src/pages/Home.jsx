@@ -10,12 +10,7 @@ export default function Home() {
   const [bookList, setBookList] = useState([]);
 
   const fetchBooks = async () => {
-    const homeBooks = [
-      "twilight",
-      "harry+potter",
-      "dragon+ball+z",
-      "l%27%C3%A9tranger",
-    ];
+    const homeBooks = ["twilight", "harry+potter", "Musk", "Dune"];
     try {
       const requests = homeBooks.map((book) =>
         axios.get(`https://openlibrary.org/search.json?q=${book}`)
