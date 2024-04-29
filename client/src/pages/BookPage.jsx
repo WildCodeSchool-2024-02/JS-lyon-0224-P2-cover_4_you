@@ -43,7 +43,6 @@ function BookPage() {
     reader.readAsDataURL(file);
   }
 
-  //  const allText = book.first_sentence
   const extract = book !== null ? book.first_sentence : "Loading...";
   const maxLength = 1;
   const truncatedExtract =
@@ -77,14 +76,23 @@ function BookPage() {
             <div className={Styles.BookSelect}>
               <img src={imageSrc} alt="book cover" id="bookCover" />
               <div className={Styles.ContainerBook}>
-                <p>Author : {canDisplay("author_name")} </p>
-                <p>Year : {canDisplay("first_publish_year")}</p>
-                <p>Pages : {canDisplay("number_of_pages_median")}</p>
+                <p>
+                  <strong>Author :</strong> {canDisplay("author_name")}{" "}
+                </p>
+                <p>
+                  <strong>Year :</strong> {canDisplay("first_publish_year")}
+                </p>
+                <p>
+                  <strong>Pages :</strong>{" "}
+                  {canDisplay("number_of_pages_median")}
+                </p>
               </div>
 
               <div className={Styles.RatingsBook}>
                 <div className={Styles.Ratings}>
-                  <p>Ratings</p>
+                  <p>
+                    <strong>Ratings</strong>
+                  </p>
                   <p>
                     <strong>
                       {canDisplay("ratings_average").toFixed(1)}/5
