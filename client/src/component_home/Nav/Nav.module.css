@@ -58,7 +58,7 @@
   z-index: 1;
 }
 
-.navbar_links_items > a {
-  font-size: 2rem;
+.navbar_links_items {
+  font-size: 1.5rem;
   color: var(--light-color);
 }

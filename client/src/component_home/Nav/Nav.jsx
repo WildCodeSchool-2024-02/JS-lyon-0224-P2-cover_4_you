@@ -29,16 +29,16 @@ function Nav() {
         <section className={styles.handle_menu}>
           <ul className={styles.navbar_links_container}>
             <li className={styles.navbar_links_items}>
-              <a href={styles.navbar_route}>Our Librairie</a>
+              Our Librairie
             </li>
             <li className={styles.navbar_links_items}>
-              <a href={styles.navbar_route}>Our Books</a>
+              Our Books
             </li>
             <li className={styles.navbar_links_items}>
-              <a href={styles.navbar_route}>My basket</a>
+              My basket
             </li>
             <li className={styles.navbar_links_items}>
-              <a href={styles.navbar_route}>Contact</a>
+              Contact
             </li>
           </ul>
         </section>
