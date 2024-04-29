@@ -1,5 +1,5 @@
 // CSS GLOBAL //
-import "./App.module.css";
+import "./App.css";
 
 import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -9,12 +9,14 @@ import SearchBar from "./component_home/SearchBar/SearchBar";
 import Footer from "./component_home/Footer/Footer";
 import BookStyle from "./component_home/BookStyle/BookStyle";
 import "react-toastify/dist/ReactToastify.css";
+import BannerHeader from "./component_home/Nav/Header/Header";
 
 function App() {
   return (
     <>
       <header>
         <Nav />
+        <BannerHeader/>
       </header>
       <main>
         <SearchBar />

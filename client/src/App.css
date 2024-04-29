@@ -1,0 +1,98 @@
+/*==========IMPORT POLICES==========*/
+
+/*==========CHARTE GRAPHIQUE==========*/
+
+:root {
+  /*COULEURS*/
+  --main-color: #606c38;
+  --secondary-color: #4a1b20;
+  --third-color: #bc6c25;
+  --light-color: #fefae0;
+
+  /*COULEURS : clair et fonce*/
+  --dark-color: #0000;
+  --white-color: #ffff;
+
+  /*POLICES*/
+
+  /* Titres */
+  --title-font-family: "Cursive", sans-serif;
+  --title-font-family-bold: "Cursive", sans-serif, bold;
+  --title-font-family-italic: "Cursive", sans-serif, italic;
+
+  --title-font-size: 1.2rem;
+
+  /* Générique */
+  --main-font-size: 0.8rem;
+  --main-font-family-sansSerif: "Poppins", sans-serif;
+  --main-font-family-bold: "Poppins", sans-serif, bold;
+  --main-font-family-italic: "Poppins", sans-serif, italic;
+
+  /* Espace */
+  --spacing-little: 0.12rem;
+  --spacing-medium: 0.3rem;
+  --spacing-big: 0.75rem;
+}
+
+/*========== CSS BALISE HTML==========*/
+
+* {
+  padding: 0rem;
+  margin: 0rem;
+  /* box-sizing: border-box; */
+}
+
+body {
+  margin: 0rem;
+  background-color: var(--light-color);
+}
+
+h1 {
+  font-family: var(--title-font-family);
+  font-size: calc(1.5 * --title-font-size);
+  color: var(--main-color);
+  margin: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--secondary-color);
+  margin: 0.5rem;
+}
+
+h3 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--secondary-color);
+  margin: 0.5rem;
+}
+
+p {
+  font-family: var(--main-font-family);
+  font-size: var(--title-font-size);
+  color: black;
+  margin: 0.5rem;
+}
+
+button {
+  padding: 0.5rem;
+  background-color: var(--main-color);
+
+  /* texte */
+  font-family: var(--title-font-family);
+  color: var(--light-color);
+  text-shadow: -0.13rem color var(--dark-color);
+  text-decoration: none;
+
+  /* border */
+  border-radius: 1rem;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+}

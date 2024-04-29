@@ -1,4 +1,4 @@
-.navbar {
+nav {
   background-color: #fefae0;
   height: 20vh;
   width: 100vw;
@@ -32,6 +32,7 @@
   background-repeat: no-repeat;
   padding-top: 2rem;
   padding-left: 3rem;
+  cursor: pointer;
 }
 /* Menu fermer + menu burger */
 .cross_nav_close {
@@ -44,6 +45,7 @@
   z-index: 3;
   background-repeat: no-repeat;
   padding-left: 3rem;
+  cursor: pointer;
 }
 
 .navbar_links_container {
@@ -61,8 +63,12 @@
 .navbar_links_items > a {
   font-size: 2rem;
   color: var(--light-color);
+  cursor: pointer;
 }
 
-.navbar_route {
+.navbar_links_items a:hover {
+  font-size: 2rem;
+  color: black;
+  width: 100%;
   cursor: pointer;
 }

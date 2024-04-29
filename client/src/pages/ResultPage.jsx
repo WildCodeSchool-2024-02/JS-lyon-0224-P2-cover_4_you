@@ -8,7 +8,7 @@ export default function ResultPage() {
   const { userQuery } = useParams();
   const [bookResult, setBookResult] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  
   useEffect(() => {
     setBookResult([]);
     try {
