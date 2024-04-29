@@ -56,15 +56,12 @@
   padding-top: 0;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 770px) {
   .year {
     display: none;
   }
-  .extractText {
-    font-size: calc(calc(1vh + 1vw));
-  }
   .bookBanner > * {
-    font-size: calc(calc(1.5vh + 1vw));
+    font-size: calc(calc(1vh + 1vw));
   }
 }
 
