@@ -52,3 +52,10 @@
   line-height: 1.4rem;
   padding-top: 0;
 }
+
+@media screen and (max-width: 570px) {
+  .bookBanner {
+    font-size: small;
+  }
+}
+

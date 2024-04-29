@@ -73,7 +73,7 @@ function BookPage() {
         <h1>Customize your book</h1>
         {book !== null && (
           <div>
-            <h2>{book.title}</h2>
+            <h2 className={Styles.bookTitle}>{book.title}</h2>
             <div className={Styles.BookSelect}>
               <img src={imageSrc} alt="book cover" id="bookCover" />
               <div className={Styles.ContainerBook}>
