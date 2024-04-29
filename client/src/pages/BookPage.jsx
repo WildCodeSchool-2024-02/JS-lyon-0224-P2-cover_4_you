@@ -159,7 +159,7 @@ function BookPage() {
             type="button"
             onClick={() => setExtractDisplay(!extractDisplay)}
           >
-            {extractDisplay ? "Read more" : "See less"}
+            {extractDisplay === true ? "Read more" : "See less"}
           </button>
         </p>
       </div>

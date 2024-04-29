@@ -46,7 +46,7 @@ function Nav() {
         </div>
       </div>
 
-      {(isMenuOpen === true || isDesktop) && (
+      {(isMenuOpen === true || isDesktop === true) && (
         <section className={styles.handle_menu}>
           <ul className={styles.navbar_links_container}>
             <li className={styles.navbar_links_items}>Our Librairie</li>
