@@ -34,7 +34,7 @@ export default function BookBanner({ book, setIsLoading }) {
         <ButtonFav />
       </div>
       <Link className={styles.buttonCustom} to={`/book-page/${isbnKey}`}>
-        <button type="button">Customise</button>
+        <button type="button">Customize</button>
       </Link>
     </div>
   );

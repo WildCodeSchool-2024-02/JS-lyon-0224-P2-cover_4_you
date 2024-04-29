@@ -30,8 +30,8 @@ function BookStyle() {
     fetchData();
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 3) % images.length);
-    }, 5000);
+      setCurrentIndex((prevIndex) => (prevIndex + 4) % images.length);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -47,7 +47,7 @@ function BookStyle() {
   return (
     <div className={styles.containerBook}>
       <p className={styles.paragraph}>
-        <h2 className={styles.colorTitle}>Find your farorite book covers</h2>
+        <h2 className={styles.colorTitle}>Find your favorite book covers</h2>
       </p>
       <div className={styles.imageContainer}>
         {getNextImages().map((image, index) => (
