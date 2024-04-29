@@ -1,15 +1,17 @@
 .bookBanner {
   display: grid;
-  grid-template: 5vh 2.5vh 2.5vh 11vh/20vw 0.5fr 1fr 0.5fr;
+  grid-template: 5vh 2.5vh 2.5vh 11vh 8vh/20vw 0.5fr 1fr;
   justify-items: center;
   margin-bottom: 5vh;
+  margin: 2rem;
 }
 .bookBanner > * {
   align-self: center;
 }
-img {
+.bookBanner > img {
   grid-row: 1/5;
   height: 20vh;
+  margin-right: 1rem;
 }
 .title {
   grid-column: 2/4;
@@ -25,15 +27,17 @@ img {
   grid-row: 3;
 }
 .buttonFav {
-  grid-column: 4;
-  grid-row: 2/4;
+  grid-column: 3;
+  grid-row: 5;
   width: 10vw;
+  justify-self: flex-start;
 }
 .buttonCustom {
-  grid-column: 4;
-  grid-row: 4;
+  grid-column: 2;
+  grid-row: 5;
+  justify-self: flex-end;
 }
-.bookBanner > .synopsis {
+.bookBanner > .extract {
   grid-row: 4;
   grid-column: 2/4;
   line-height: 1rem;
@@ -42,4 +46,38 @@ img {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+.extractText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.85rem;
+  margin: 0;
+  margin-left: 0.8em;
+  line-height: 1rem;
+  padding-top: 0;
+}
+
+@media screen and (max-width: 770px) {
+  .year {
+    display: none;
+  }
+  .bookBanner > * {
+    font-size: calc(calc(1vh + 1vw));
+  }
+}
+
+@media screen and (min-width: 570px) {
+  .buttonFav {
+    grid-column: 4;
+    grid-row: 2/4;
+    width: 10vw;
+    justify-self: flex-start;
+  }
+  .buttonCustom {
+    grid-column: 4;
+    grid-row: 4;
+    justify-self: flex-start;
+  }
+  .bookBanner {
+    grid-template: 5vh 2.5vh 2.5vh 11vh/20vw 0.5fr 1fr 0.5fr;
+  }
 }
