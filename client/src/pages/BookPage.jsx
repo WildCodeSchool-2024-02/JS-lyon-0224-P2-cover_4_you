@@ -43,7 +43,6 @@ function BookPage() {
     reader.readAsDataURL(file);
   }
 
-  //  const allText = book.first_sentence
   const extract = book !== null ? book.first_sentence : "Loading...";
   const maxLength = 1;
   const truncatedExtract =

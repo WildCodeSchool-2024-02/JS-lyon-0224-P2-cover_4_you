@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Nav.module.css";
 import Close from "../../assets/images-navBar/close.svg";
 import Open from "../../assets/images-navBar/burger2.png";
@@ -6,6 +6,19 @@ import Logo from "../../assets/images-navBar/logo_accueil.png";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const screenDesktop = window.matchMedia("(min-width: 600px)").matches;
+
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 600);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -34,7 +47,7 @@ function Nav() {
         </div>
       </div>
 
-      {isMenuOpen === false && (
+      {(isMenuOpen === true || isDesktop) && (
         <section className={styles.handle_menu}>
           <ul className={styles.navbar_links_container}>
             <li className={styles.navbar_links_items}>Our Librairie</li>

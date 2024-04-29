@@ -6,7 +6,7 @@ import ButtonFav from "../ButtonFav/ButtonFav";
 
 export default function BookBanner({ book, setIsLoading }) {
   const isbnKey = book.isbn[0];
-  const [bookCover, setBookCover] = useState(""); // mettre par défault l'image faite par Laura
+  const [bookCover, setBookCover] = useState("");
 
   function canDisplay(element) {
     return book !== null ? book[element] : "Loading...";
