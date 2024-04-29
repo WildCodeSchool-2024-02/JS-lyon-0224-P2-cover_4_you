@@ -22,7 +22,7 @@ export default function ResultPage() {
   return (
     <>
       <h1>Results for "{userQuery.slice(1)}"</h1>
-      {isLoading && (
+      {isLoading === true && (
         <div className={styles.container}>
           <div className={styles.loader} />
         </div>
