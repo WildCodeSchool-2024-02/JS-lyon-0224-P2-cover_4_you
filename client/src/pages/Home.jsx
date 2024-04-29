@@ -32,7 +32,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      {isLoading && (
+      {isLoading === true && (
         <div className={styles.container}>
           <div className={styles.loader} />
         </div>
