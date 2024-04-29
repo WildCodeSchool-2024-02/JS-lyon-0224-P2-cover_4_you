@@ -82,6 +82,34 @@ meter::-webkit-meter-optimum-value {
   background: #bc6c25;
 }
 
+.buttonDisplay {
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.1rem;
+  font-weight: bolder;
+}
+
+.buttonDisplay:hover {
+  color: #606c38;
+}
+
+.displayText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.85rem;
+  padding: 0.2rem 2rem;
+  margin: 0;
+  margin-left: 0.8em;
+  line-height: 1.9rem;
+}
+.titleExtract {
+  padding: 0.2rem 2rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 @media screen and (max-width: 570px) {
   .RatingsBook {
     margin-top: 20px;
