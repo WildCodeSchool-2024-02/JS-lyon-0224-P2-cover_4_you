@@ -12,8 +12,8 @@
   align-items: center;
 }
 
-.BookSelect h2 {
-  align-items: start;
+.bookTitle {
+  margin: 2.5rem;
 }
 
 .BookCover {
