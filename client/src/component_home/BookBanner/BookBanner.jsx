@@ -27,6 +27,9 @@ export default function BookBanner({ book, setIsLoading }) {
       <h2 className={styles.title}>{canDisplay("title")}</h2>
       <p className={styles.author}>{canDisplay("author_name")} </p>
       <p className={styles.year}>{canDisplay("first_publish_year")}</p>
+      <div className={styles.extract}>
+        <p className={styles.extractText}>{canDisplay("first_sentence")}</p>
+      </div>
       <div className={styles.buttonFav}>
         <ButtonFav />
       </div>
