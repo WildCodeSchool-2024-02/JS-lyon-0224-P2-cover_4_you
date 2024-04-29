@@ -1,15 +1,12 @@
 import { useState } from "react";
 import styles from "./Nav.module.css";
 
-
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const logoCover4You = ""
 
   return (
     <nav>
@@ -47,8 +44,6 @@ function Nav() {
             </li>
           </ul>
         </section>
-        
-        
       )}
     </nav>
   );
