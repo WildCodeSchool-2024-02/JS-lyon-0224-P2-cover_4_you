@@ -33,7 +33,7 @@
   grid-column: 4;
   grid-row: 4;
 }
-.bookBanner > .synopsis {
+.bookBanner > .extract {
   grid-row: 4;
   grid-column: 2/4;
   line-height: 1rem;
@@ -43,4 +43,12 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   padding-top: 3rem;
+}
+.extractText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.85rem;
+  margin: 0;
+  margin-left: 0.8em;
+  line-height: 1.4rem;
+  padding-top: 0;
 }
