@@ -18,7 +18,7 @@ function BookStyle() {
           data?.docs
             ?.slice(0, 9)
             .map((book) =>
-              book.cover_i === true
+              book.cover_i !== null
                 ? `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`
                 : ""
             ) || [];
